@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="io.github.domi04151309.powerapp.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/shutdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/Shutdown"
+                app:srcCompat="@drawable/poweroff_round" />
+
+            <ImageButton
+                android:id="@+id/reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/Reboot"
+                app:srcCompat="@drawable/reboot_round" />
+
+            <ImageButton
+                android:id="@+id/soft_reboot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/SoftReboot"
+                app:srcCompat="@drawable/soft_reboot_round" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Shutdown"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Reboot"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/SoftReboot"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/recovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/Recovery"
+                app:srcCompat="@drawable/recovery_round" />
+
+            <ImageButton
+                android:id="@+id/bootloader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/Bootloader"
+                app:srcCompat="@drawable/bootloader_round" />
+
+            <ImageButton
+                android:id="@+id/screen_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/ScreenOff"
+                app:srcCompat="@drawable/screen_off_round" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Recovery"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Bootloader"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="33dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ScreenOff"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/root"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/root" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

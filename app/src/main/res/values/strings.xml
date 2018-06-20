@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Power App</string>
+    <string name="Bootloader">Reboot Bootloader</string>
+    <string name="Reboot">Reboot</string>
+    <string name="Recovery">Reboot Recovery</string>
+    <string name="root">Request Root</string>
+    <string name="ScreenOff">Turn Screen off</string>
+    <string name="Shutdown">Shutdown</string>
+    <string name="SoftReboot">Soft Reboot</string>
+</resources>
