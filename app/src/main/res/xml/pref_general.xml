@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="Android 8"
+        android:entries="@array/pref_style_array_display"
+        android:entryValues="@array/pref_style_array"
+        android:key="AppStyle"
+        android:summary="@string/pref_style_summary"
+        android:title="@string/pref_style" />
+
+    <Preference
+        android:key="info"
+        android:title="@string/pref_info"
+        android:summary="@string/pref_info_summary" >
+        <intent android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.About"/>
+    </Preference>
+
+</PreferenceScreen>

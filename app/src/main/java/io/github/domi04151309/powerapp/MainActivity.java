@@ -1,5 +1,8 @@
 package io.github.domi04151309.powerapp;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +17,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String userTheme = preferences.getString("AppStyle", "8");
+        if (userTheme.equals("8"))
+            setTheme(R.style.AppTheme_8);
+        else if (userTheme.equals("7"))
+            setTheme(R.style.AppTheme_7);
+        else if (userTheme.equals("dark"))
+            setTheme(R.style.AppTheme_Dark);
+        else if (userTheme.equals("black"))
+            setTheme(R.style.AppTheme_Black);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -110,6 +123,14 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        Button btn8 = findViewById(R.id.prefBtn);
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Preferences.class));
             }
         });
     }

@@ -2,6 +2,14 @@
 <resources>
     <color name="colorPrimary">#F5F5F5</color>
     <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="colorPrimary.7">#2D2D2D</color>
+    <color name="colorPrimaryDark.7">#161616</color>
+    <color name="colorPrimary.Dark">#212121</color>
+    <color name="colorPrimaryDark.Dark">#161616</color>
     <color name="colorAccent">#4285F4</color>
-    <color name="transparent">@android:color/transparent</color>
+    <color name="black">#000000</color>
+    <color name="dark">#303030</color>
+    <color name="white">#ffffff</color>
+    <color name="white128">#80ffffff</color>
+    <color name="transparent">#00000000</color>
 </resources>
