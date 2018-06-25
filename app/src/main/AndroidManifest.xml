@@ -28,6 +28,24 @@
             android:name=".About"
             android:label="@string/pref_info"
             android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <service
+            android:name=".QSShutdown"
+            android:icon="@drawable/shutdown"
+            android:label="@string/Shutdown"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".QSReboot"
+            android:icon="@drawable/reboot"
+            android:label="@string/Reboot"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
