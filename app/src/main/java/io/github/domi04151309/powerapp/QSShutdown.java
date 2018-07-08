@@ -6,8 +6,7 @@ import android.service.quicksettings.TileService;
 import android.widget.Toast;
 
 @TargetApi(Build.VERSION_CODES.N)
-public class QSShutdown
-        extends TileService{
+public class QSShutdown extends TileService{
 
     @Override
     public void onClick() {

@@ -6,8 +6,7 @@ import android.service.quicksettings.TileService;
 import android.widget.Toast;
 
 @TargetApi(Build.VERSION_CODES.N)
-public class QSReboot
-        extends TileService{
+public class QSReboot extends TileService{
 
     @Override
     public void onClick() {

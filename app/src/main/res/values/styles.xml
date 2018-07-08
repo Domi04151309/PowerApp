@@ -1,8 +1,8 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/Button</item>
     </style>
@@ -15,7 +15,6 @@
     <style name="AppTheme.8" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="actionBarStyle">@style/ActionBarStyle.8</item>
         <item name="actionBarTheme">@style/ActionBarTheme.8</item>
@@ -37,7 +36,6 @@
     <style name="AppTheme.7" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary.7</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark.7</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.Dark" parent="AppTheme">
