@@ -47,12 +47,11 @@
         <item name="android:alertDialogTheme">@style/DialogTheme.Dark</item>
     </style>
 
-    <style name="DialogTheme.Dark" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:alertDialogStyle">@style/DialogStyle</item>
+    <style name="DialogTheme.Dark" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/dark</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorAlertDialogListItem">@color/white</item>
+        <item name="android:background">@color/dark</item>
     </style>
 
     <style name="AppTheme.Black" parent="AppTheme">
@@ -65,20 +64,7 @@
     </style>
 
     <style name="DialogTheme.Black" parent="DialogTheme.Dark">
-        <item name="android:windowBackground">@color/black</item>
-    </style>
-
-    <style name="DialogStyle">
-        <item name="android:fullDark">@android:color/transparent</item>
-        <item name="android:topDark">@android:color/transparent</item>
-        <item name="android:centerDark">@android:color/transparent</item>
-        <item name="android:bottomDark">@android:color/transparent</item>
-        <item name="android:fullBright">@android:color/transparent</item>
-        <item name="android:topBright">@android:color/transparent</item>
-        <item name="android:centerBright">@android:color/transparent</item>
-        <item name="android:bottomBright">@android:color/transparent</item>
-        <item name="android:bottomMedium">@android:color/transparent</item>
-        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:background">@color/black</item>
     </style>
 
 </resources>
