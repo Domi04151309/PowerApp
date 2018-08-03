@@ -8,7 +8,6 @@
     tools:context="io.github.domi04151309.powerapp.About">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/info" />

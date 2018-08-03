@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 public class Preferences extends AppCompatPreferenceActivity {
 
-    SharedPreferences.OnSharedPreferenceChangeListener spChanged = new
+    private final SharedPreferences.OnSharedPreferenceChangeListener spChanged = new
             SharedPreferences.OnSharedPreferenceChangeListener() {
                 @Override
                 public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
@@ -26,14 +26,20 @@ public class Preferences extends AppCompatPreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String userTheme = preferences.getString("AppStyle", "8");
-        if (userTheme.equals("8"))
-            setTheme(R.style.AppTheme_8);
-        else if (userTheme.equals("7"))
-            setTheme(R.style.AppTheme_7);
-        else if (userTheme.equals("dark"))
-            setTheme(R.style.AppTheme_Dark);
-        else if (userTheme.equals("black"))
-            setTheme(R.style.AppTheme_Black);
+        switch (userTheme) {
+            case "8":
+                setTheme(R.style.AppTheme_8);
+                break;
+            case "7":
+                setTheme(R.style.AppTheme_7);
+                break;
+            case "dark":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "black":
+                setTheme(R.style.AppTheme_Black);
+                break;
+        }
         super.onCreate(savedInstanceState);
         setupActionBar();
         getFragmentManager().beginTransaction()

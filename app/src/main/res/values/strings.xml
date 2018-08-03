@@ -1,16 +1,17 @@
 <resources>
     <string name="app_name">Power App</string>
-    <string name="root">Request Root</string>
 
-    <string name="Bootloader">Reboot Bootloader</string>
-    <string name="Reboot">Reboot</string>
-    <string name="Recovery">Reboot Recovery</string>
-    <string name="ScreenOff">Turn off Screen</string>
     <string name="Shutdown">Shutdown</string>
+    <string name="Reboot">Reboot</string>
+    <string name="Recovery">Reboot into Recovery</string>
+    <string name="Bootloader">Reboot into Bootloader</string>
     <string name="SoftReboot">Soft Reboot</string>
+    <string name="SystemUI">Restart System UI</string>
+    <string name="ScreenOff">Turn Off Screen</string>
 
+    <string name="root">Request Root</string>
     <string name="pref">Settings</string>
-    <string name="pref_header_general">General</string>
+
     <string name="pref_style">Change Style</string>
     <string name="pref_style_summary">Changes the look of the app</string>
     <string-array name="pref_style_array_display">
@@ -27,6 +28,7 @@
     </string-array>
     <string name="pref_info">App Info</string>
     <string name="pref_info_summary">Information about the app and the developer</string>
+
     <string name="info">This app is developed by Domi04151309.\nYou can fork this app on GitHub.</string>
     <string name="website">Visit developer\'s website</string>
 </resources>
