@@ -17,29 +17,14 @@ public class Preferences extends AppCompatPreferenceActivity {
                 @Override
                 public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
                                                       String key) {
-                    finish();
                     startActivity(new Intent(Preferences.this, MainActivity.class));
+                    finish();
                 }
             };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userTheme = preferences.getString("AppStyle", "8");
-        switch (userTheme) {
-            case "8":
-                setTheme(R.style.AppTheme_8);
-                break;
-            case "7":
-                setTheme(R.style.AppTheme_7);
-                break;
-            case "dark":
-                setTheme(R.style.AppTheme_Dark);
-                break;
-            case "black":
-                setTheme(R.style.AppTheme_Black);
-                break;
-        }
+        Theme.check(this);
         super.onCreate(savedInstanceState);
         setupActionBar();
         getFragmentManager().beginTransaction()

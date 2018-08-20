@@ -11,6 +11,7 @@ public class About extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Theme.checkDialog(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
