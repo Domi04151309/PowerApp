@@ -8,11 +8,11 @@
         android:gravity="center">
         <shape android:shape="oval">
             <size android:width="@dimen/outer_circle" android:height="@dimen/outer_circle"/>
-            <solid android:color="@color/green"/>
+            <solid android:color="@color/orange"/>
         </shape>
     </item>
     <item
-        android:drawable="@drawable/ic_reboot"
+        android:drawable="@drawable/ic_restart"
         android:height="@dimen/inner_circle"
         android:width="@dimen/inner_circle"
         android:gravity="center"/>

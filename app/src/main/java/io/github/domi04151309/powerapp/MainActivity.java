@@ -1,7 +1,6 @@
 package io.github.domi04151309.powerapp;
 
 import android.content.Intent;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -22,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.shutdown).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "reboot -p" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText
                             (MainActivity.this, "Action failed! Please enable root!", Toast.LENGTH_LONG).show();
@@ -34,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.reboot).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "reboot" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity.this, "Action failed! Please enable root!",
                             Toast.LENGTH_LONG).show();
@@ -46,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.recovery).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "reboot recovery" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity.this, "Action failed! Please enable root!",
                             Toast.LENGTH_LONG).show();
@@ -58,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bootloader).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "reboot bootloader" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity.this, "Action failed! Please enable root!",
                             Toast.LENGTH_LONG).show();
@@ -70,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.soft_reboot).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "setprop ctl.restart zygote" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText
                             (MainActivity.this, "Action failed! Please enable root!", Toast.LENGTH_LONG).show();
@@ -82,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.system_ui).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "killall com.android.systemui" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText
                             (MainActivity.this, "Action failed! Please enable root!", Toast.LENGTH_LONG).show();
@@ -94,9 +93,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.screen_off).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    Process proc = Runtime.getRuntime()
+                    Process p = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "input keyevent KEYCODE_POWER" });
-                    proc.waitFor();
+                    p.waitFor();
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity.this, "Action failed! Please enable root!",
                             Toast.LENGTH_LONG).show();

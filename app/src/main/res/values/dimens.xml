@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="frame">80dp</dimen>
+    <dimen name="outer_circle">60dp</dimen>
+    <dimen name="inner_circle">40dp</dimen>
+</resources>

@@ -14,57 +14,50 @@
         <Button
             android:id="@+id/shutdown"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/poweroff_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/shutdown"
             android:text="@string/Shutdown" />
 
         <Button
             android:id="@+id/reboot"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/reboot_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/reboot"
             android:text="@string/Reboot" />
 
         <Button
             android:id="@+id/recovery"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/recovery_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/recovery"
             android:text="@string/Recovery" />
 
         <Button
             android:id="@+id/bootloader"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/bootloader_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/bootloader"
             android:text="@string/Bootloader" />
 
         <Button
             android:id="@+id/soft_reboot"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/soft_reboot_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/soft_reboot"
             android:text="@string/SoftReboot" />
 
         <Button
             android:id="@+id/system_ui"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/system_ui_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/restart_system_ui"
             android:text="@string/SystemUI" />
 
         <Button
             android:id="@+id/screen_off"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:drawableStart="@drawable/screen_off_round"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/screen_off"
             android:text="@string/ScreenOff" />
 
         <LinearLayout

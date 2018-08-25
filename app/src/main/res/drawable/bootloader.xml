@@ -12,7 +12,7 @@
         </shape>
     </item>
     <item
-        android:drawable="@drawable/ic_reboot"
+        android:drawable="@drawable/ic_bootloader"
         android:height="@dimen/inner_circle"
         android:width="@dimen/inner_circle"
         android:gravity="center"/>

@@ -10,15 +10,15 @@ public class QSShutdown extends TileService{
 
     @Override
     public void onClick() {
-        boolean isCurrentlyLocked = this.isLocked();
+        boolean isCurrentlyLocked = isLocked();
         if (!isCurrentlyLocked) {
             try {
-                Process proc = Runtime.getRuntime()
+                Process p = Runtime.getRuntime()
                         .exec(new String[]{ "su", "-c", "reboot -p" });
-                proc.waitFor();
+                p.waitFor();
             } catch (Exception ex) {
                 Toast.makeText
-                        (QSShutdown.this, "Action failed! Please enable root!", Toast.LENGTH_LONG).show();
+                        (this, "Action failed! Please enable root!", Toast.LENGTH_LONG).show();
             }
         }
     }
