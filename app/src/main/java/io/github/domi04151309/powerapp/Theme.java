@@ -10,46 +10,74 @@ import android.support.v4.content.ContextCompat;
 
 class Theme {
 
+    static boolean customActionBar = false;
+    
     static void check(Context context){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String userTheme = preferences.getString("AppStyle", "8");
+        String userTheme = preferences.getString("AppStyle", "9");
         switch (userTheme) {
+            case "9":
+                context.setTheme(R.style.AppTheme_9);
+                recent(context, R.color.colorPrimary_9);
+                customActionBar = true;
+                break;
             case "8":
                 context.setTheme(R.style.AppTheme_8);
-                recent(context, R.color.colorPrimary);
+                recent(context, R.color.colorPrimary_8);
+                customActionBar = false;
                 break;
             case "7":
                 context.setTheme(R.style.AppTheme_7);
                 recent(context, R.color.colorPrimary_7);
+                customActionBar = false;
                 break;
             case "dark":
                 context.setTheme(R.style.AppTheme_Dark);
                 recent(context, R.color.colorPrimary_Dark);
+                customActionBar = false;
                 break;
             case "black":
                 context.setTheme(R.style.AppTheme_Black);
                 recent(context, R.color.black);
+                customActionBar = false;
+                break;
+            default:
+                context.setTheme(R.style.AppTheme_9);
+                recent(context, R.color.colorPrimary_9);
+                customActionBar = true;
                 break;
         }
     }
 
     static void checkDialog(Context context){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String userTheme = preferences.getString("AppStyle", "8");
+        String userTheme = preferences.getString("AppStyle", "9");
         switch (userTheme) {
+            case "9":
+                recent(context, R.color.colorPrimary_9);
+                customActionBar = false;
+                break;
             case "8":
-                recent(context, R.color.colorPrimary);
+                recent(context, R.color.colorPrimary_8);
+                customActionBar = false;
                 break;
             case "7":
                 recent(context, R.color.colorPrimary_7);
+                customActionBar = false;
                 break;
             case "dark":
                 context.setTheme(R.style.DialogTheme_Dark);
                 recent(context, R.color.colorPrimary_Dark);
+                customActionBar = false;
                 break;
             case "black":
                 context.setTheme(R.style.DialogTheme_Black);
                 recent(context, R.color.black);
+                customActionBar = false;
+                break;
+            default:
+                recent(context, R.color.colorPrimary_9);
+                customActionBar = false;
                 break;
         }
     }

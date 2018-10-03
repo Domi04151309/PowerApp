@@ -1,10 +1,12 @@
 package io.github.domi04151309.powerapp;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import java.io.DataOutputStream;
@@ -17,6 +19,25 @@ public class MainActivity extends AppCompatActivity {
         Theme.check(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (Theme.customActionBar) {
+            final ActionBar actionBar = getSupportActionBar();
+            assert actionBar != null;
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setCustomView(R.layout.action_bar);
+            actionBar.setElevation(0);
+            final View scrollView = findViewById(R.id.scrollView);
+            scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
+                @Override
+                public void onScrollChanged() {
+                    if (scrollView.getScrollY() > 0)
+                        actionBar.setElevation(16);
+                    else
+                        actionBar.setElevation(0);
+                }
+            });
+        }
 
         findViewById(R.id.shutdown).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

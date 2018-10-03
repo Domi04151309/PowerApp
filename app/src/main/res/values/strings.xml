@@ -15,12 +15,14 @@
     <string name="pref_style">Change Style</string>
     <string name="pref_style_summary">Changes the look of the app</string>
     <string-array name="pref_style_array_display">
+        <item>Android 9</item>
         <item>Android 8</item>
-        <item>Android 7</item>
+        <item>Android 7 &amp; 6</item>
         <item>Dark</item>
         <item>Black</item>
     </string-array>
     <string-array name="pref_style_array">
+        <item>9</item>
         <item>8</item>
         <item>7</item>
         <item>dark</item>

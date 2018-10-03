@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
-import android.view.MenuItem;
 
 public class Preferences extends AppCompatPreferenceActivity {
 

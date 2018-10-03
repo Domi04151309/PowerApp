@@ -1,8 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/Button.Borderless</item>
+        <item name="secondaryButtonStyle">@style/Button</item>
     </style>
 
     <style name="Button" parent="Widget.AppCompat.Button">
@@ -23,16 +24,33 @@
         <item name="android:padding">0dp</item>
     </style>
 
+    <style name="AppTheme.9" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary.9</item>
+        <item name="colorPrimaryDark">@color/colorPrimary.9</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.9</item>
+        <item name="secondaryButtonStyle">@style/Button.9</item>
+        <item name="android:windowBackground">@color/colorPrimary.9</item>
+    </style>
+
+    <style name="ActionBarTheme.9" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/actionBarTextColor</item>
+    </style>
+
+    <style name="Button.9" parent="Button">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
     <style name="AppTheme.8" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/colorPrimary.8</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
         <item name="actionBarStyle">@style/ActionBarStyle.8</item>
         <item name="actionBarTheme">@style/ActionBarTheme.8</item>
     </style>
 
     <style name="ActionBarStyle.8" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@color/colorPrimary</item>
+        <item name="background">@color/colorPrimary.8</item>
         <item name="titleTextStyle">@style/ActionBarTitle.8</item>
     </style>
 
