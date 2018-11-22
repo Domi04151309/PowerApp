@@ -7,7 +7,7 @@ This App offers you a lot of different power options like shutting down, rebooti
 <img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview.jpg" width="18%" />
 <img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview2.jpg" width="18%" />
 <img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview3.jpg" width="18%" />
-<img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview4.jpg" width="18%" />  
+<img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview4.jpg" width="18%" />
 <img src="https://raw.githubusercontent.com/Domi04151309/Power-App-for-Android/master/preview5.jpg" width="18%" />  
 
 *<a href="https://en.wikipedia.org/wiki/Rooting_(Android)">What is rooting?</a>*  
