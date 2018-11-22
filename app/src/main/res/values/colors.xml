@@ -13,6 +13,8 @@
     <color name="dark">#303030</color>
     <color name="textColorDark">#deffffff</color>
     <color name="secondaryTextColorDark">#61ffffff</color>
+    <color name="navigationBarColor.Dark">@color/colorPrimary.Dark</color>
+    <color name="navigationBarColor.Black">#000001</color>
 
     <color name="red">#E73737</color>
     <color name="green">#0CBE8B</color>

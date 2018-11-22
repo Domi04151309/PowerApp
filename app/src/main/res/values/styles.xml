@@ -74,6 +74,7 @@
         <item name="android:textColor">@color/textColorDark</item>
         <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
         <item name="android:alertDialogTheme">@style/DialogTheme.Dark</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor.Dark</item>
     </style>
 
     <style name="DialogTheme.Dark" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -91,6 +92,7 @@
         <item name="android:textColor">@color/textColorDark</item>
         <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
         <item name="android:alertDialogTheme">@style/DialogTheme.Black</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor.Black</item>
     </style>
 
     <style name="DialogTheme.Black" parent="DialogTheme.Dark">
