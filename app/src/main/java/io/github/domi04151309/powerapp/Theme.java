@@ -49,39 +49,6 @@ class Theme {
         }
     }
 
-    static void checkDialog(Context context){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String userTheme = preferences.getString("AppStyle", "9");
-        switch (userTheme) {
-            case "9":
-                recent(context, R.color.colorPrimary_9);
-                customActionBar = false;
-                break;
-            case "8":
-                recent(context, R.color.colorPrimary_8);
-                customActionBar = false;
-                break;
-            case "7":
-                recent(context, R.color.colorPrimary_7);
-                customActionBar = false;
-                break;
-            case "dark":
-                context.setTheme(R.style.DialogTheme_Dark);
-                recent(context, R.color.colorPrimary_Dark);
-                customActionBar = false;
-                break;
-            case "black":
-                context.setTheme(R.style.DialogTheme_Black);
-                recent(context, R.color.black);
-                customActionBar = false;
-                break;
-            default:
-                recent(context, R.color.colorPrimary_9);
-                customActionBar = false;
-                break;
-        }
-    }
-
     private static void recent(Context context, int color){
         ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription(
                 context.getString(R.string.app_name),

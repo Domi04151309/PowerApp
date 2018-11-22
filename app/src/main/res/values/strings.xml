@@ -28,9 +28,8 @@
         <item>dark</item>
         <item>black</item>
     </string-array>
-    <string name="pref_info">App Info</string>
-    <string name="pref_info_summary">Information about the app and the developer</string>
-
-    <string name="info">This app is developed by Domi04151309.\nYou can fork this app on GitHub.</string>
-    <string name="website">Visit developer\'s website</string>
+    <string name="pref_version">App Version</string>
+    <string name="pref_version_unknown">Unknown version</string>
+    <string name="pref_github">Show Source</string>
+    <string name="pref_github_summary">Shows this app\'s source code on GitHub</string>
 </resources>

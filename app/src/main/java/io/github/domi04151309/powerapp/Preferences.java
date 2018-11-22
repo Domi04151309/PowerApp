@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
@@ -45,6 +46,8 @@ public class Preferences extends AppCompatPreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
+            Preference version = findPreference("version");
+            version.setSummary(BuildConfig.VERSION_NAME);
         }
     }
 }

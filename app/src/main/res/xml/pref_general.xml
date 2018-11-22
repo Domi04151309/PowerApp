@@ -4,16 +4,25 @@
         android:defaultValue="9"
         android:entries="@array/pref_style_array_display"
         android:entryValues="@array/pref_style_array"
+        android:icon="@drawable/pref_style"
         android:key="AppStyle"
         android:summary="@string/pref_style_summary"
         android:title="@string/pref_style" />
 
     <Preference
-        android:key="info"
-        android:title="@string/pref_info"
-        android:summary="@string/pref_info_summary" >
-        <intent android:targetPackage="io.github.domi04151309.powerapp"
-            android:targetClass="io.github.domi04151309.powerapp.About"/>
+        android:key="version"
+        android:title="@string/pref_version"
+        android:summary="@string/pref_version_unknown"
+        android:icon="@drawable/pref_version" >
+    </Preference>
+
+    <Preference
+        android:title="@string/pref_github"
+        android:summary="@string/pref_github_summary"
+        android:icon="@drawable/pref_source" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/Domi04151309/Power-App-for-Android" />
     </Preference>
 
 </PreferenceScreen>
