@@ -32,28 +32,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val root = Root(this)
+        val po = PowerOptions(this)
 
         findViewById<View>(R.id.shutdown).setOnClickListener {
-            root.shell("reboot -p")
+            po.shutdown()
         }
         findViewById<View>(R.id.reboot).setOnClickListener {
-            root.shell("reboot")
+            po.reboot()
         }
         findViewById<View>(R.id.recovery).setOnClickListener {
-            root.shell("reboot recovery")
+            po.rebootIntoRecovery()
         }
         findViewById<View>(R.id.bootloader).setOnClickListener {
-            root.shell("reboot bootloader")
+            po.rebootIntoRecovery()
         }
         findViewById<View>(R.id.soft_reboot).setOnClickListener {
-            root.shell("setprop ctl.restart zygote")
+            po.softReboot()
         }
         findViewById<View>(R.id.system_ui).setOnClickListener {
-            root.shell("killall com.android.systemui")
+            po.restartSystemUI()
         }
         findViewById<View>(R.id.screen_off).setOnClickListener {
-            root.shell("input keyevent KEYCODE_POWER")
+            po.turnOffScreen()
         }
         findViewById<View>(R.id.root).setOnClickListener {
             val p: Process
