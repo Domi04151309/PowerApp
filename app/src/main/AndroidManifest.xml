@@ -30,7 +30,7 @@
 
         <service
             android:name=".qs.Shutdown"
-            android:icon="@drawable/ic_qs_shutdown"
+            android:icon="@drawable/ic_shutdown"
             android:label="@string/Shutdown"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
@@ -42,8 +42,20 @@
         </service>
         <service
             android:name=".qs.Reboot"
-            android:icon="@drawable/ic_qs_reboot"
+            android:icon="@drawable/ic_reboot"
             android:label="@string/Reboot"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+        <service
+            android:name=".qs.RestartSystemUI"
+            android:icon="@drawable/ic_restart"
+            android:label="@string/SystemUI"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />

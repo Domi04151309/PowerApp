@@ -6,11 +6,11 @@ import android.service.quicksettings.TileService
 import io.github.domi04151309.powerapp.PowerOptions
 
 @TargetApi(Build.VERSION_CODES.N)
-class Reboot : TileService() {
+class RestartSystemUI : TileService() {
 
     override fun onClick() {
         unlockAndRun {
-            PowerOptions(this).reboot()
+            PowerOptions(this).restartSystemUI()
         }
     }
 }

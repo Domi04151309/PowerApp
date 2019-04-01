@@ -9,7 +9,7 @@ import io.github.domi04151309.powerapp.PowerOptions
 class Shutdown : TileService() {
 
     override fun onClick() {
-        if (!isLocked) {
+        unlockAndRun {
             PowerOptions(this).shutdown()
         }
     }
