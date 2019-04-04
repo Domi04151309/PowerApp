@@ -9,6 +9,15 @@
         android:summary="@string/pref_style_summary"
         android:title="@string/pref_style" />
 
+    <ListPreference
+        android:defaultValue="light"
+        android:entries="@array/pref_style_mode_array_display"
+        android:entryValues="@array/pref_style_mode_array"
+        android:icon="@drawable/pref_style_mode"
+        android:key="AppStyleMode"
+        android:summary="@string/pref_style_mode_summary"
+        android:title="@string/pref_style_mode" />
+
     <Preference
         android:key="version"
         android:title="@string/pref_version"

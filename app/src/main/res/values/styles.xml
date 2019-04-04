@@ -1,10 +1,50 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="iconColor">?android:attr/textColorSecondary</item>
         <item name="buttonStyle">@style/Button.Borderless</item>
         <item name="secondaryButtonStyle">@style/Button</item>
+    </style>
+
+    <style name="AppTheme.9" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary.9</item>
+        <item name="colorPrimaryDark">@color/colorPrimary.9</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="secondaryButtonStyle">@style/Button.9</item>
+        <item name="android:windowBackground">@color/colorPrimary.9</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.9</item>
+        <item name="android:listDivider">@null</item>
+    </style>
+
+    <style name="AppTheme.8" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary.8</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="actionBarStyle">@style/ActionBarStyle.8</item>
+        <item name="actionBarTheme">@style/ActionBarTheme.8</item>
+    </style>
+
+    <style name="AppTheme.7" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary.7</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.7</item>
+        <item name="iconColor">?attr/colorAccent</item>
+    </style>
+
+    <style name="ActionBarStyle.8" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/ActionBarTitle.8</item>
+    </style>
+
+    <style name="ActionBarTheme.8" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="ActionBarTheme.9" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/actionBarTextColor</item>
+    </style>
+
+    <style name="ActionBarTitle.8" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
     <style name="Button" parent="Widget.AppCompat.Button">
@@ -25,58 +65,33 @@
         <item name="android:padding">0dp</item>
     </style>
 
-    <style name="AppTheme.9" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary.9</item>
-        <item name="colorPrimaryDark">@color/colorPrimary.9</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <item name="actionBarTheme">@style/ActionBarTheme.9</item>
-        <item name="secondaryButtonStyle">@style/Button.9</item>
-        <item name="android:windowBackground">@color/colorPrimary.9</item>
-    </style>
-
-    <style name="ActionBarTheme.9" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="colorControlNormal">@color/actionBarTextColor</item>
-    </style>
-
     <style name="Button.9" parent="Button">
         <item name="android:stateListAnimator">@null</item>
     </style>
 
-    <style name="AppTheme.8" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary.8</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
-        <item name="actionBarStyle">@style/ActionBarStyle.8</item>
-        <item name="actionBarTheme">@style/ActionBarTheme.8</item>
-    </style>
-
-    <style name="ActionBarStyle.8" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@color/colorPrimary.8</item>
-        <item name="titleTextStyle">@style/ActionBarTitle.8</item>
-    </style>
-
-    <style name="ActionBarTheme.8" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="colorControlNormal">@color/colorAccent</item>
-    </style>
-
-    <style name="ActionBarTitle.8" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.7" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary.7</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.7</item>
-        <item name="iconColor">?attr/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.Dark" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary.Dark</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.Dark</item>
+    <style name="Dark">
+        <item name="colorPrimary">@color/dark</item>
+        <item name="colorPrimaryDark">@color/dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
         <item name="android:windowBackground">@color/dark</item>
         <item name="android:textColor">@color/textColorDark</item>
         <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
         <item name="android:alertDialogTheme">@style/DialogTheme.Dark</item>
         <item name="android:navigationBarColor">@color/navigationBarColor.Dark</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="Dark.TwoTone" parent="Dark">
+        <item name="colorPrimary">@color/colorPrimary.Dark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.Dark</item>
+    </style>
+
+    <style name="Black" parent="Dark">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme.Black</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor.Black</item>
     </style>
 
     <style name="DialogTheme.Dark" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -87,18 +102,16 @@
         <item name="android:windowBackground">@color/dark</item>
     </style>
 
-    <style name="AppTheme.Black" parent="AppTheme">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="android:windowBackground">@color/black</item>
-        <item name="android:textColor">@color/textColorDark</item>
-        <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
-        <item name="android:alertDialogTheme">@style/DialogTheme.Black</item>
-        <item name="android:navigationBarColor">@color/navigationBarColor.Black</item>
-    </style>
-
     <style name="DialogTheme.Black" parent="DialogTheme.Dark">
         <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="ActionBarTheme_8_Patch">
+        <item name="actionBarTheme">@style/ActionBarTheme.8</item>
+    </style>
+
+    <style name="Theme_8_Patch" parent="ActionBarTheme_8_Patch">
+        <item name="colorPrimaryDark">@color/colorPrimary.Dark</item>
     </style>
 
 </resources>
