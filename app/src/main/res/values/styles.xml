@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/colorAccent</item>
@@ -7,7 +7,9 @@
         <item name="secondaryButtonStyle">@style/Button</item>
     </style>
 
-    <style name="AppTheme.9" parent="AppTheme">
+    <style name="AppTheme.LightNavigationBar" parent="AppTheme" />
+
+    <style name="AppTheme.9" parent="AppTheme.LightNavigationBar">
         <item name="colorPrimary">@color/colorPrimary.9</item>
         <item name="colorPrimaryDark">@color/colorPrimary.9</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -17,7 +19,7 @@
         <item name="android:listDivider">@null</item>
     </style>
 
-    <style name="AppTheme.8" parent="AppTheme">
+    <style name="AppTheme.8" parent="AppTheme.LightNavigationBar">
         <item name="colorPrimary">@color/colorPrimary.8</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -79,6 +81,7 @@
         <item name="android:alertDialogTheme">@style/DialogTheme.Dark</item>
         <item name="android:navigationBarColor">@color/navigationBarColor.Dark</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
 
     <style name="Dark.TwoTone" parent="Dark">
