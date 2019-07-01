@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/colorAccent</item>
@@ -10,7 +10,7 @@
     <style name="AppTheme.9" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary.9</item>
         <item name="colorPrimaryDark">@color/colorPrimary.9</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="secondaryButtonStyle">@style/Button.9</item>
         <item name="android:windowBackground">@color/colorPrimary.9</item>
         <item name="actionBarTheme">@style/ActionBarTheme.9</item>
@@ -20,7 +20,7 @@
     <style name="AppTheme.8" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary.8</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="actionBarStyle">@style/ActionBarStyle.8</item>
         <item name="actionBarTheme">@style/ActionBarTheme.8</item>
     </style>
@@ -72,7 +72,7 @@
     <style name="Dark">
         <item name="colorPrimary">@color/dark</item>
         <item name="colorPrimaryDark">@color/dark</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowBackground">@color/dark</item>
         <item name="android:textColor">@color/textColorDark</item>
         <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
