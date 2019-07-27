@@ -14,7 +14,7 @@ class PowerOptions(context: Context) {
                     .exec(arrayOf("su", "-c", command))
             p.waitFor()
         } catch (ex: Exception) {
-            Toast.makeText(c, "Action failed! Please enable root!", Toast.LENGTH_LONG).show()
+            Toast.makeText(c, R.string.action_failed, Toast.LENGTH_LONG).show()
             Log.e("Superuser", ex.toString())
         }
 
