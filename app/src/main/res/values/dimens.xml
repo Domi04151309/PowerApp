@@ -3,4 +3,8 @@
     <dimen name="frame">70dp</dimen>
     <dimen name="outer_circle">55dp</dimen>
     <dimen name="inner_circle">35dp</dimen>
+
+    <dimen name="about_item_margin">16dp</dimen>
+    <dimen name="about_divider_margin">32dp</dimen>
+    <dimen name="header_icon_height">48dp</dimen>
 </resources>

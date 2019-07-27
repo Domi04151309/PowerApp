@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
+import android.preference.Preference
 import android.preference.PreferenceManager
 import android.preference.PreferenceFragment
 
@@ -35,8 +36,10 @@ class Preferences : AppCompatPreferenceActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             addPreferencesFromResource(R.xml.pref_general)
-            val version = findPreference("version")
-            version.summary = BuildConfig.VERSION_NAME
+            findPreference("about").onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                startActivity(Intent(context, AboutActivity::class.java))
+                true
+            }
         }
     }
 }
