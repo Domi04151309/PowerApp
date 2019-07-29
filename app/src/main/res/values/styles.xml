@@ -10,26 +10,26 @@
     <style name="AppTheme.LightNavigationBar" parent="AppTheme" />
 
     <style name="AppTheme.9" parent="AppTheme.LightNavigationBar">
-        <item name="colorPrimary">@color/colorPrimary.9</item>
-        <item name="colorPrimaryDark">@color/colorPrimary.9</item>
+        <item name="colorPrimary">@color/colorPrimary9</item>
+        <item name="colorPrimaryDark">@color/colorPrimary9</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="secondaryButtonStyle">@style/Button.9</item>
-        <item name="android:windowBackground">@color/colorPrimary.9</item>
+        <item name="android:windowBackground">@color/colorPrimary9</item>
         <item name="actionBarTheme">@style/ActionBarTheme.9</item>
         <item name="android:listDivider">@null</item>
     </style>
 
     <style name="AppTheme.8" parent="AppTheme.LightNavigationBar">
-        <item name="colorPrimary">@color/colorPrimary.8</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.8</item>
+        <item name="colorPrimary">@color/colorPrimary8</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark8</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="actionBarStyle">@style/ActionBarStyle.8</item>
         <item name="actionBarTheme">@style/ActionBarTheme.8</item>
     </style>
 
     <style name="AppTheme.7" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary.7</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.7</item>
+        <item name="colorPrimary">@color/colorPrimary7</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark7</item>
         <item name="iconColor">?attr/colorAccent</item>
     </style>
 
@@ -79,14 +79,14 @@
         <item name="android:textColor">@color/textColorDark</item>
         <item name="android:textColorSecondary">@color/secondaryTextColorDark</item>
         <item name="android:alertDialogTheme">@style/DialogTheme.Dark</item>
-        <item name="android:navigationBarColor">@color/navigationBarColor.Dark</item>
+        <item name="android:navigationBarColor">@color/navigationBarColorDark</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
 
     <style name="Dark.TwoTone" parent="Dark">
-        <item name="colorPrimary">@color/colorPrimary.Dark</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark.Dark</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
     </style>
 
     <style name="Black" parent="Dark">
@@ -94,7 +94,7 @@
         <item name="colorPrimaryDark">@color/black</item>
         <item name="android:windowBackground">@color/black</item>
         <item name="android:alertDialogTheme">@style/DialogTheme.Black</item>
-        <item name="android:navigationBarColor">@color/navigationBarColor.Black</item>
+        <item name="android:navigationBarColor">@color/navigationBarColorBlack</item>
     </style>
 
     <style name="DialogTheme.Dark" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -114,7 +114,7 @@
     </style>
 
     <style name="Theme_8_Patch" parent="ActionBarTheme_8_Patch">
-        <item name="colorPrimaryDark">@color/colorPrimary.Dark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
 </resources>

@@ -1,17 +1,16 @@
 package io.github.domi04151309.powerapp
 
-import android.annotation.TargetApi
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Build
 import android.os.Bundle
-import android.preference.Preference
-import android.preference.PreferenceManager
-import android.preference.PreferenceFragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 
-class Preferences : AppCompatPreferenceActivity() {
+class Preferences : AppCompatActivity() {
 
-    private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
+    private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { _, _ ->
         startActivity(Intent(this@Preferences, MainActivity::class.java))
         finish()
     }
@@ -19,24 +18,19 @@ class Preferences : AppCompatPreferenceActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         Theme.check(this)
         super.onCreate(savedInstanceState)
-        setupActionBar()
-        fragmentManager.beginTransaction()
-                .replace(android.R.id.content, GeneralPreferenceFragment())
+        setContentView(R.layout.activity_settings)
+        supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.settings, SettingsFragment())
                 .commit()
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(spChanged)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    private fun setupActionBar() {
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    class GeneralPreferenceFragment : PreferenceFragment() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
+    class SettingsFragment : PreferenceFragmentCompat() {
+        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_general)
-            findPreference("about").onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            findPreference<Preference>("about")!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
                 startActivity(Intent(context, AboutActivity::class.java))
                 true
             }

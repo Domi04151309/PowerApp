@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary.9">#fff</color>
-    <color name="colorPrimary.8">#F5F5F5</color>
-    <color name="colorPrimaryDark.8">#E0E0E0</color>
-    <color name="colorPrimary.7">#2D2D2D</color>
-    <color name="colorPrimaryDark.7">#161616</color>
-    <color name="colorPrimary.Dark">#212121</color>
-    <color name="colorPrimaryDark.Dark">#161616</color>
+    <color name="colorPrimary9">#fff</color>
+    <color name="colorPrimary8">#F5F5F5</color>
+    <color name="colorPrimaryDark8">#E0E0E0</color>
+    <color name="colorPrimary7">#2D2D2D</color>
+    <color name="colorPrimaryDark7">#161616</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorPrimaryDarkDark">#161616</color>
     <color name="colorAccent">#4285F4</color>
     <color name="actionBarTextColor">#757575</color>
     <color name="black">#000</color>
     <color name="dark">#303030</color>
     <color name="textColorDark">#deffffff</color>
     <color name="secondaryTextColorDark">#61ffffff</color>
-    <color name="navigationBarColor.Dark">@color/colorPrimary.Dark</color>
-    <color name="navigationBarColor.Black">#000001</color>
+    <color name="navigationBarColorDark">@color/colorPrimaryDark</color>
+    <color name="navigationBarColorBlack">#000001</color>
 
     <color name="red">#E73737</color>
     <color name="green">#0CBE8B</color>

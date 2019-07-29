@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context
 import android.graphics.BitmapFactory
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import androidx.core.content.ContextCompat
 
 internal object Theme {
@@ -20,11 +20,11 @@ internal object Theme {
                 context.setTheme(R.style.AppTheme_9)
                 when (userThemeMode) {
                     "light" -> {
-                        recent(context, R.color.colorPrimary_9)
+                        recent(context, R.color.colorPrimary9)
                     }
                     "dark" -> {
                         context.setTheme(R.style.Dark)
-                        recent(context, R.color.colorPrimary_Dark)
+                        recent(context, R.color.colorPrimaryDark)
                     }
                     "black" -> {
                         context.setTheme(R.style.Black)
@@ -37,12 +37,12 @@ internal object Theme {
                 context.setTheme(R.style.AppTheme_8)
                 when (userThemeMode) {
                     "light" -> {
-                        recent(context, R.color.colorPrimary_8)
+                        recent(context, R.color.colorPrimary8)
                     }
                     "dark" -> {
                         context.setTheme(R.style.Dark)
                         context.setTheme(R.style.Theme_8_Patch)
-                        recent(context, R.color.colorPrimary_Dark)
+                        recent(context, R.color.colorPrimaryDark)
                     }
                     "black" -> {
                         context.setTheme(R.style.Black)
@@ -56,11 +56,11 @@ internal object Theme {
                 context.setTheme(R.style.AppTheme_7)
                 when (userThemeMode) {
                     "light" -> {
-                        recent(context, R.color.colorPrimary_7)
+                        recent(context, R.color.colorPrimary7)
                     }
                     "dark" -> {
                         context.setTheme(R.style.Dark_TwoTone)
-                        recent(context, R.color.colorPrimary_Dark)
+                        recent(context, R.color.colorPrimaryDark)
                     }
                     "black" -> {
                         context.setTheme(R.style.Black)
@@ -71,7 +71,7 @@ internal object Theme {
             }
             else -> {
                 context.setTheme(R.style.AppTheme_9)
-                recent(context, R.color.colorPrimary_9)
+                recent(context, R.color.colorPrimary9)
                 customActionBar = true
             }
         }
