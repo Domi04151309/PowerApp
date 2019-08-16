@@ -17,19 +17,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (Theme.customActionBar) {
-            val actionBar = supportActionBar!!
-            actionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-            actionBar.setDisplayShowCustomEnabled(true)
-            actionBar.setCustomView(R.layout.action_bar)
-            actionBar.elevation = 0f
-            val scrollView = findViewById<View>(R.id.scrollView)
-            scrollView.viewTreeObserver.addOnScrollChangedListener {
-                if (scrollView.scrollY > 0)
-                    actionBar.elevation = 16f
-                else
-                    actionBar.elevation = 0f
-            }
+        val actionBar = supportActionBar!!
+        actionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        actionBar.setDisplayShowCustomEnabled(true)
+        actionBar.setCustomView(R.layout.action_bar)
+        actionBar.elevation = 0f
+        val scrollView = findViewById<View>(R.id.scrollView)
+        scrollView.viewTreeObserver.addOnScrollChangedListener {
+            if (scrollView.scrollY > 0)
+                actionBar.elevation = 16f
+            else
+                actionBar.elevation = 0f
         }
 
         val po = PowerOptions(this)

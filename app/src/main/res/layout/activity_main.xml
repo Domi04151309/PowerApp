@@ -16,49 +16,49 @@
             android:id="@+id/shutdown"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/shutdown"
+            android:drawableStart="@drawable/ic_round_shutdown"
             android:text="@string/Shutdown" />
 
         <Button
             android:id="@+id/reboot"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/reboot"
+            android:drawableStart="@drawable/ic_round_reboot"
             android:text="@string/Reboot" />
 
         <Button
             android:id="@+id/recovery"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/recovery"
+            android:drawableStart="@drawable/ic_round_recovery"
             android:text="@string/Recovery" />
 
         <Button
             android:id="@+id/bootloader"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/bootloader"
+            android:drawableStart="@drawable/ic_round_bootloader"
             android:text="@string/Bootloader" />
 
         <Button
             android:id="@+id/soft_reboot"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/soft_reboot"
+            android:drawableStart="@drawable/ic_round_soft_reboot"
             android:text="@string/SoftReboot" />
 
         <Button
             android:id="@+id/system_ui"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/restart_system_ui"
+            android:drawableStart="@drawable/ic_round_restart_system_ui"
             android:text="@string/SystemUI" />
 
         <Button
             android:id="@+id/screen_off"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/screen_off"
+            android:drawableStart="@drawable/ic_round_screen_off"
             android:text="@string/ScreenOff" />
 
         <LinearLayout

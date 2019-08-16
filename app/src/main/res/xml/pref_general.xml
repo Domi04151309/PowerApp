@@ -1,34 +1,25 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
-        android:defaultValue="9"
-        android:entries="@array/pref_style_array_display"
-        android:entryValues="@array/pref_style_array"
-        android:icon="@drawable/pref_style"
-        android:key="AppStyle"
-        android:summary="@string/pref_style_summary"
-        android:title="@string/pref_style" />
-
-    <ListPreference
         android:defaultValue="light"
-        android:entries="@array/pref_style_mode_array_display"
-        android:entryValues="@array/pref_style_mode_array"
-        android:icon="@drawable/pref_style_mode"
-        android:key="AppStyleMode"
-        android:summary="@string/pref_style_mode_summary"
-        android:title="@string/pref_style_mode" />
+        android:entries="@array/pref_theme_array_display"
+        android:entryValues="@array/pref_theme_array"
+        android:icon="@drawable/ic_theme"
+        android:key="AppTheme"
+        android:summary="@string/pref_theme_summary"
+        android:title="@string/pref_theme" />
 
     <Preference
         android:key="about"
         android:title="@string/about"
         android:summary="@string/about_summary"
-        android:icon="@drawable/pref_about" >
+        android:icon="@drawable/ic_info" >
     </Preference>
 
     <Preference
         android:title="@string/pref_github"
         android:summary="@string/pref_github_summary"
-        android:icon="@drawable/pref_source" >
+        android:icon="@drawable/ic_source" >
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://github.com/Domi04151309/Power-App-for-Android" />

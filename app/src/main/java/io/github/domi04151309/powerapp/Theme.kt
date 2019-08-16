@@ -9,72 +9,23 @@ import androidx.core.content.ContextCompat
 
 internal object Theme {
 
-    var customActionBar = false
-
     fun check(context: Context) {
-        val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-        val userTheme = preferences.getString("AppStyle", "9")
-        val userThemeMode = preferences.getString("AppStyleMode", "light")
-        when (userTheme) {
-            "9" -> {
-                context.setTheme(R.style.AppTheme_9)
-                when (userThemeMode) {
-                    "light" -> {
-                        recent(context, R.color.colorPrimary9)
-                    }
-                    "dark" -> {
-                        context.setTheme(R.style.Dark)
-                        recent(context, R.color.colorPrimaryDark)
-                    }
-                    "black" -> {
-                        context.setTheme(R.style.Black)
-                        recent(context, R.color.black)
-                    }
-                }
-                customActionBar = true
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        when (prefs.getString("AppTheme", "light")) {
+            "light" -> {
+                context.setTheme(R.style.AppThemeLight)
+                recent(context, R.color.colorPrimary)
             }
-            "8" -> {
-                context.setTheme(R.style.AppTheme_8)
-                when (userThemeMode) {
-                    "light" -> {
-                        recent(context, R.color.colorPrimary8)
-                    }
-                    "dark" -> {
-                        context.setTheme(R.style.Dark)
-                        context.setTheme(R.style.Theme_8_Patch)
-                        recent(context, R.color.colorPrimaryDark)
-                    }
-                    "black" -> {
-                        context.setTheme(R.style.Black)
-                        context.setTheme(R.style.ActionBarTheme_8_Patch)
-                        recent(context, R.color.black)
-                    }
-                }
-                customActionBar = false
+            "dark" -> {
+                context.setTheme(R.style.AppThemeDark)
+                recent(context, R.color.dark)
             }
-            "7" -> {
-                context.setTheme(R.style.AppTheme_7)
-                when (userThemeMode) {
-                    "light" -> {
-                        recent(context, R.color.colorPrimary7)
-                    }
-                    "dark" -> {
-                        context.setTheme(R.style.Dark_TwoTone)
-                        recent(context, R.color.colorPrimaryDark)
-                    }
-                    "black" -> {
-                        context.setTheme(R.style.Black)
-                        recent(context, R.color.black)
-                    }
-                }
-                customActionBar = false
-            }
-            else -> {
-                context.setTheme(R.style.AppTheme_9)
-                recent(context, R.color.colorPrimary9)
-                customActionBar = true
+            "black" -> {
+                context.setTheme(R.style.AppThemeBlack)
+                recent(context, R.color.black)
             }
         }
+        context.setTheme(R.style.Patch)
     }
 
     private fun recent(context: Context, color: Int) {
