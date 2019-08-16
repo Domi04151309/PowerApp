@@ -10,7 +10,8 @@
     <string name="SystemUI">Restart System UI</string>
     <string name="ScreenOff">Turn Off Screen</string>
 
-    <string name="action_failed">Action failed! Please enable root!</string>
+    <string name="action_failed">Action failed</string>
+    <string name="action_failed_summary">Root is needed. Please enable root.</string>
 
     <string name="root">Request Root</string>
     <string name="pref">Settings</string>

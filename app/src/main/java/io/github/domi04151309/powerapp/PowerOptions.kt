@@ -1,8 +1,8 @@
 package io.github.domi04151309.powerapp
 
+import android.app.AlertDialog
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
 
 class PowerOptions(context: Context) {
 
@@ -14,7 +14,10 @@ class PowerOptions(context: Context) {
                     .exec(arrayOf("su", "-c", command))
             p.waitFor()
         } catch (ex: Exception) {
-            Toast.makeText(c, R.string.action_failed, Toast.LENGTH_LONG).show()
+            AlertDialog.Builder(c).setTitle(c.resources.getString(R.string.action_failed))
+                    .setMessage(c.resources.getString(R.string.action_failed_summary))
+                    .setPositiveButton(c.resources.getString(android.R.string.ok)) { _, _ -> }
+                    .show()
             Log.e("Superuser", ex.toString())
         }
 
