@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/BorderlessButton</item>
         <item name="secondaryButtonStyle">@style/Button</item>
+        <item name="android:dialogCornerRadius" tools:targetApi="28">8dp</item>
         <item name="android:listDivider">@null</item>
     </style>
 

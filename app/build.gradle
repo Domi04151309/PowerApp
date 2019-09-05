@@ -9,11 +9,16 @@ android {
         applicationId "io.github.domi04151309.powerapp"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.8"
+        versionCode 181
+        versionName "1.8.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
             minifyEnabled true
             shrinkResources true
