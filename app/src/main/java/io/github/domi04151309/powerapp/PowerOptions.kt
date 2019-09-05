@@ -3,7 +3,6 @@ package io.github.domi04151309.powerapp
 import android.app.AlertDialog
 import android.content.Context
 import android.util.Log
-import androidx.appcompat.view.ContextThemeWrapper
 
 class PowerOptions(private val context: Context) {
 
@@ -13,7 +12,7 @@ class PowerOptions(private val context: Context) {
                     .exec(arrayOf("su", "-c", command))
             p.waitFor()
         } catch (e: Exception) {
-            AlertDialog.Builder(ContextThemeWrapper(context, context.theme))
+            AlertDialog.Builder(context)
                     .setTitle(R.string.action_failed)
                     .setMessage(R.string.action_failed_summary)
                     .setPositiveButton(android.R.string.ok) { _, _ -> }
