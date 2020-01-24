@@ -1,0 +1,19 @@
+This App offers you a lot of different power options like shutting down, rebooting, soft rebooting, rebooting into recovery, rebooting into the bootloader, restarting System UI and turning off your screen.
+
+Root is required!
+I am not responsible for any damage to your device!
+
+<font color="#2467d6"><b>Features</b></font>
+- Shutdown
+- Reboot
+- Reboot into recovery
+- Reboot into Bootloader
+- Soft reboot
+- Restart System UI
+- Turn off screen
+- Quick tiles
+- Themes
+
+<font color="#2467d6"><b>Related Links</b></font>
+Source code: <a href="https://github.com/Domi04151309/Power-App-for-Android">https://github.com/Domi04151309/Power-App-for-Android</a>
+Website: <a href="https://domi04151309.github.io/Android/Powerapp">https://domi04151309.github.io/Android/Powerapp</a>
