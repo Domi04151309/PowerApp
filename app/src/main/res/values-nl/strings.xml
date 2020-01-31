@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Energie-app</string>
+    <string name="app_by">Energie-app, gemaakt door Domi04151309</string>
+
+    <string name="Shutdown">Afsluiten</string>
+    <string name="Reboot">Opnieuw starten</string>
+    <string name="Recovery">Herstelmodus starten</string>
+    <string name="Bootloader">Opstartlader starten</string>
+    <string name="SoftReboot">Zacht opnieuw starten</string>
+    <string name="SystemUI">Startscherm opnieuw starten</string>
+    <string name="ScreenOff">Scherm uitschakelen</string>
+
+    <string name="action_failed">Actie mislukt</string>
+    <string name="action_failed_summary">Root is vereist - schakel root in.</string>
+
+    <string name="root">Roottoegangsverzoek</string>
+    <string name="pref">Instellingen</string>
+    <string name="pref_theme">Thema wijzigen</string>
+    <string name="pref_theme_summary">Kies tussen een licht, donker of zwart thema</string>
+    <string-array name="pref_theme_array_display">
+        <item>Licht</item>
+        <item>Donker</item>
+        <item>Zwart</item>
+    </string-array>
+    <string-array name="pref_theme_array">
+        <item>licht</item>
+        <item>donker</item>
+        <item>zwart</item>
+    </string-array>
+    <string name="pref_github">Broncode bekijken</string>
+    <string name="pref_github_summary">Open de broncodepagina op GitHub</string>
+
+    <string name="about">Over</string>
+    <string name="about_summary">Over de app</string>
+    <string name="about_version">Versie %1$s</string>
+    <string name="about_disclaimer1">Wellicht is er een nieuwere versie beschikbaar op GitHub. Deze app is gratis en zal dat ook altijd blijven. Betaal niet voor deze app.</string>
+    <string name="about_disclaimer2">Ik ben niet verantwoordelijk voor schade aan je apparaat.</string>
+</resources>
