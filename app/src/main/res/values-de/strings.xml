@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Power App</string>
+    <string name="app_by">Power App von Domi04151309</string>
+
+    <string name="Shutdown">Herunterfahren</string>
+    <string name="Reboot">Neu starten</string>
+    <string name="Recovery">In den Wiederherstellungsmodus neu starten</string>
+    <string name="Bootloader">In den Bootloader neu starten</string>
+    <string name="SoftReboot">Sanft neu starten</string>
+    <string name="SystemUI">System UI neu starten</string>
+    <string name="ScreenOff">Bildschirm ausschalten</string>
+
+    <string name="action_failed">Aktion fehlgeschlagen</string>
+    <string name="action_failed_summary">Root wird benötigt. Bitte aktivieren Sie root.</string>
+
+    <string name="root">Root anfordern</string>
+    <string name="pref">Einstellungen</string>
+    <string name="pref_theme">Thema ändern</string>
+    <string name="pref_theme_summary">Wähle zwischen hellem, dunklem und schwarzem Thema</string>
+    <string-array name="pref_theme_array_display">
+        <item>Hell</item>
+        <item>Dunkel</item>
+        <item>Schwarz</item>
+    </string-array>
+    <string name="pref_github">Quelltext anzeigen</string>
+    <string name="pref_github_summary">Zeige den Quelltext dieser App auf GitHub an</string>
+
+    <string name="about">Über</string>
+    <string name="about_summary">Über die App</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_disclaimer1">Möglicherweise sind neuere Versionen auf <a href="https://github.com/Domi04151309/Power-App-for-Android">GitHub</a> verfügbar. Diese App ist und bleibt freie Software. Zahlen Sie nicht für diese App.</string>
+    <string name="about_disclaimer2">Ich bin nicht für Schäden an Ihrem Gerät verantwortlich.</string>
+</resources>

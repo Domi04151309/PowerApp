@@ -28,6 +28,6 @@
     <string name="about">Over</string>
     <string name="about_summary">Over de app</string>
     <string name="about_version">Versie %1$s</string>
-    <string name="about_disclaimer1">Wellicht is er een nieuwere versie beschikbaar op GitHub. Deze app is gratis en zal dat ook altijd blijven. Betaal niet voor deze app.</string>
+    <string name="about_disclaimer1">Wellicht is er een nieuwere versie beschikbaar op <a href="https://github.com/Domi04151309/Power-App-for-Android">GitHub</a>. Deze app is gratis en zal dat ook altijd blijven. Betaal niet voor deze app.</string>
     <string name="about_disclaimer2">Ik ben niet verantwoordelijk voor schade aan je apparaat.</string>
 </resources>
