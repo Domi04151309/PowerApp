@@ -1,0 +1,3 @@
+- Add German translations
+- Add Dutch translations
+- Improve about screen
