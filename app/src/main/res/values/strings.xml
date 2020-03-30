@@ -22,7 +22,7 @@
         <item>Dark</item>
         <item>Black</item>
     </string-array>
-    <string-array name="pref_theme_array">
+    <string-array name="pref_theme_array" translatable="false">
         <item>light</item>
         <item>dark</item>
         <item>black</item>

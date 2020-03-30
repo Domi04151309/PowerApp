@@ -22,11 +22,6 @@
         <item>Donker</item>
         <item>Zwart</item>
     </string-array>
-    <string-array name="pref_theme_array">
-        <item>licht</item>
-        <item>donker</item>
-        <item>zwart</item>
-    </string-array>
     <string name="pref_github">Broncode bekijken</string>
     <string name="pref_github_summary">Open de broncodepagina op GitHub</string>
 
