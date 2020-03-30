@@ -15,14 +15,4 @@
         android:summary="@string/about_summary"
         android:icon="@drawable/ic_info" >
     </Preference>
-
-    <Preference
-        android:title="@string/pref_github"
-        android:summary="@string/pref_github_summary"
-        android:icon="@drawable/ic_source" >
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://github.com/Domi04151309/Power-App-for-Android" />
-    </Preference>
-
 </PreferenceScreen>
