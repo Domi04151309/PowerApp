@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="shutdown"
+        android:enabled="true"
+        android:icon="@drawable/ic_shutdown"
+        android:shortcutShortLabel="@string/Shutdown"
+        android:shortcutLongLabel="@string/Shutdown"
+        android:shortcutDisabledMessage="@string/Shutdown">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.ShutdownActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="reboot"
+        android:enabled="true"
+        android:icon="@drawable/ic_reboot"
+        android:shortcutShortLabel="@string/Reboot"
+        android:shortcutLongLabel="@string/Reboot"
+        android:shortcutDisabledMessage="@string/Reboot">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.RebootActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="recovery"
+        android:enabled="true"
+        android:icon="@drawable/ic_recovery"
+        android:shortcutShortLabel="@string/Recovery"
+        android:shortcutLongLabel="@string/Recovery"
+        android:shortcutDisabledMessage="@string/Recovery">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.RecoveryActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="bootloader"
+        android:enabled="true"
+        android:icon="@drawable/ic_bootloader"
+        android:shortcutShortLabel="@string/Bootloader"
+        android:shortcutLongLabel="@string/Bootloader"
+        android:shortcutDisabledMessage="@string/Bootloader">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.BootloaderActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="sortreboot"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_soft_reboot"
+        android:shortcutShortLabel="@string/SoftReboot"
+        android:shortcutLongLabel="@string/SoftReboot"
+        android:shortcutDisabledMessage="@string/SoftReboot">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.SoftrebootActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="restartsystemui"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_restart_system_ui"
+        android:shortcutShortLabel="@string/SystemUI"
+        android:shortcutLongLabel="@string/SystemUI"
+        android:shortcutDisabledMessage="@string/SystemUI">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.RestartUIActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="screenoff"
+        android:enabled="true"
+        android:icon="@drawable/ic_screen_off"
+        android:shortcutShortLabel="@string/ScreenOff"
+        android:shortcutLongLabel="@string/ScreenOff"
+        android:shortcutDisabledMessage="@string/ScreenOff">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.ScreenoffActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
