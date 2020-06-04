@@ -58,6 +58,7 @@
             android:text="@string/app_by" />
 
         <TextView
+            android:id="@+id/github"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_github"
@@ -67,6 +68,7 @@
             android:text="@string/about_github" />
 
         <TextView
+            android:id="@+id/license"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/about_item_margin"
@@ -85,6 +87,7 @@
             android:text="@string/about_damage" />
 
         <TextView
+            android:id="@+id/icons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/about_item_margin"
