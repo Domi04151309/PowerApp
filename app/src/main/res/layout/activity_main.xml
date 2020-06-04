@@ -17,49 +17,56 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_shutdown"
-            android:text="@string/Shutdown" />
+            android:text="@string/Shutdown"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/reboot"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_reboot"
-            android:text="@string/Reboot" />
+            android:text="@string/Reboot"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/recovery"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_recovery"
-            android:text="@string/Recovery" />
+            android:text="@string/Recovery"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/bootloader"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_bootloader"
-            android:text="@string/Bootloader" />
+            android:text="@string/Bootloader"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/soft_reboot"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_soft_reboot"
-            android:text="@string/SoftReboot" />
+            android:text="@string/SoftReboot"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/system_ui"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_restart_system_ui"
-            android:text="@string/SystemUI" />
+            android:text="@string/SystemUI"
+            style="@style/BorderlessButton" />
 
         <Button
             android:id="@+id/screen_off"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
             android:drawableStart="@drawable/ic_round_screen_off"
-            android:text="@string/ScreenOff" />
+            android:text="@string/ScreenOff"
+            style="@style/BorderlessButton" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,19 +76,19 @@
 
             <Button
                 android:id="@+id/root"
-                style="?attr/secondaryButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/root" />
+                android:text="@string/root"
+                style="@style/Button" />
 
             <Button
                 android:id="@+id/prefBtn"
-                style="?attr/secondaryButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/pref" />
+                android:text="@string/pref"
+                style="@style/Button" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

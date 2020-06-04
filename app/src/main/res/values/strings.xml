@@ -10,6 +10,9 @@
     <string name="SystemUI">Restart System UI</string>
     <string name="ScreenOff">Turn Off Screen</string>
 
+    <string name="confirm_dialog">Are you sure?</string>
+    <string name="confirm_dialog_summary">Are you sure that you want to perform the selected action?</string>
+
     <string name="action_failed">Action failed</string>
     <string name="action_failed_summary">Root is needed. Please enable root.</string>
 

@@ -9,9 +9,18 @@ class PowerOptions(private val context: Context) {
 
     private fun shell(command: String) {
         try {
-            val p = Runtime.getRuntime()
-                    .exec(arrayOf("su", "-c", command))
-            p.waitFor()
+            try {
+                AlertDialog.Builder(context)
+                        .setTitle(R.string.confirm_dialog)
+                        .setMessage(R.string.confirm_dialog_summary)
+                        .setPositiveButton(android.R.string.ok) { _, _ ->
+                            Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
+                        }
+                        .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                        .show()
+            } catch (e: Exception) {
+                Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
+            }
         } catch (e: Exception) {
             try {
                 AlertDialog.Builder(context)

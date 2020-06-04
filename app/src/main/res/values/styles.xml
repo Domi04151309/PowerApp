@@ -1,18 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="LaunchTheme" parent="Base.Theme.AppCompat">
+    <style name="LaunchTheme" parent="Theme.AppCompat">
         <item name="android:windowBackground">@color/dark</item>
     </style>
 
     <style name="Patch">
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="buttonStyle">@style/BorderlessButton</item>
-        <item name="secondaryButtonStyle">@style/Button</item>
+        <item name="dialogTheme">@style/Theme.AppCompat.Dialog.Alert</item>
         <item name="android:dialogCornerRadius" tools:targetApi="28">8dp</item>
         <item name="android:listDivider">@null</item>
     </style>
 
-    <style name="AppThemeLightNavigationBar" parent="Base.Theme.AppCompat.Light" />
+    <style name="AppThemeLightNavigationBar" parent="Theme.AppCompat.Light" />
 
     <style name="AppThemeLight" parent="AppThemeLightNavigationBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -23,7 +22,7 @@
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
     </style>
 
-    <style name="AppThemeDark" parent="Base.Theme.AppCompat">
+    <style name="AppThemeDark" parent="Theme.AppCompat">
         <item name="colorPrimary">@color/dark</item>
         <item name="colorPrimaryDark">@color/dark</item>
         <item name="android:windowLightStatusBar">false</item>
