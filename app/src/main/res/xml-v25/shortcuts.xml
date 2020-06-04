@@ -61,6 +61,21 @@
     </shortcut>
 
     <shortcut
+        android:shortcutId="edl"
+        android:enabled="true"
+        android:icon="@drawable/ic_edl"
+        android:shortcutShortLabel="@string/EDL"
+        android:shortcutLongLabel="@string/EDL"
+        android:shortcutDisabledMessage="@string/EDL">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.shortcuts.EDLActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
         android:shortcutId="sortreboot"
         android:enabled="true"
         android:icon="@drawable/ic_restart"

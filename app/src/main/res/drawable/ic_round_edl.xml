@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@android:color/transparent"
+        android:height="@dimen/frame"
+        android:width="@dimen/frame"/>
+    <item
+        android:gravity="center">
+        <shape android:shape="oval">
+            <size android:width="@dimen/outer_circle" android:height="@dimen/outer_circle"/>
+            <solid android:color="@color/green"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_edl"
+        android:height="@dimen/inner_circle"
+        android:width="@dimen/inner_circle"
+        android:gravity="center"/>
+</layer-list>

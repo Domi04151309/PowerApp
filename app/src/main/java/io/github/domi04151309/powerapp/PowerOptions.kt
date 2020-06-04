@@ -52,6 +52,10 @@ class PowerOptions(private val context: Context) {
         shell("reboot bootloader")
     }
 
+    fun rebootIntoEDL() {
+        shell("reboot edl")
+    }
+
     fun softReboot() {
         shell("setprop ctl.restart zygote")
     }

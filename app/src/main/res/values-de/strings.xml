@@ -6,9 +6,13 @@
     <string name="Reboot">Neu starten</string>
     <string name="Recovery">In den Wiederherstellungsmodus neu starten</string>
     <string name="Bootloader">In den Bootloader neu starten</string>
+    <string name="EDL">In EDL neu starten</string>
     <string name="SoftReboot">Sanft neu starten</string>
     <string name="SystemUI">System UI neu starten</string>
     <string name="ScreenOff">Bildschirm ausschalten</string>
+
+    <string name="confirm_dialog">Sind Sie sich sicher?</string>
+    <string name="confirm_dialog_summary">Sind Sie sich sicher, dass Sie den ausgewählten Befehl ausführen wollen?</string>
 
     <string name="action_failed">Aktion fehlgeschlagen</string>
     <string name="action_failed_summary">Root wird benötigt. Bitte aktivieren Sie root.</string>

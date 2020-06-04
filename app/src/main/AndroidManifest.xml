@@ -70,6 +70,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".shortcuts.EDLActivity"
+            android:label="@string/EDL"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".shortcuts.SoftRebootActivity"
             android:label="@string/SoftReboot"
             android:theme="@android:style/Theme.NoDisplay">

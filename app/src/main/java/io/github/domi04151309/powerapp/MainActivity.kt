@@ -44,6 +44,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.bootloader).setOnClickListener {
             po.rebootIntoBootloader()
         }
+        findViewById<View>(R.id.edl).setOnClickListener {
+            po.rebootIntoEDL()
+        }
         findViewById<View>(R.id.soft_reboot).setOnClickListener {
             po.softReboot()
         }

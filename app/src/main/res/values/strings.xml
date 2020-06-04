@@ -6,6 +6,7 @@
     <string name="Reboot">Reboot</string>
     <string name="Recovery">Reboot into Recovery</string>
     <string name="Bootloader">Reboot into Bootloader</string>
+    <string name="EDL">Reboot into EDL</string>
     <string name="SoftReboot">Soft Reboot</string>
     <string name="SystemUI">Restart System UI</string>
     <string name="ScreenOff">Turn Off Screen</string>

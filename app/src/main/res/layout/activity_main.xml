@@ -45,6 +45,14 @@
             style="@style/BorderlessButton" />
 
         <Button
+            android:id="@+id/edl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/ic_round_edl"
+            android:text="@string/EDL"
+            style="@style/BorderlessButton" />
+
+        <Button
             android:id="@+id/soft_reboot"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
