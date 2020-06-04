@@ -30,6 +30,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data android:name="android.app.shortcuts"
+                       android:resource="@xml/shortcuts" />
         </activity>
         <activity
             android:name=".Preferences"
@@ -38,6 +41,34 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.domi04151309.powerapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ShutdownActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".RebootActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".BootloaderActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".SoftrebootActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".RecoveryActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".RestartUIActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name=".ScreenoffActivity"
+            android:theme="@android:style/Theme.NoDisplay">
         </activity>
 
         <receiver
