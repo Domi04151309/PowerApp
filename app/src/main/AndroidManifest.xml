@@ -43,32 +43,67 @@
                 android:value="io.github.domi04151309.powerapp.MainActivity" />
         </activity>
         <activity
-            android:name=".ShutdownActivity"
+            android:name=".shortcuts.ShutdownActivity"
+            android:label="@string/Shutdown"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".RebootActivity"
+            android:name=".shortcuts.RebootActivity"
+            android:label="@string/Reboot"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".BootloaderActivity"
+            android:name=".shortcuts.BootloaderActivity"
+            android:label="@string/Bootloader"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".SoftrebootActivity"
+            android:name=".shortcuts.SoftRebootActivity"
+            android:label="@string/SoftReboot"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".RecoveryActivity"
+            android:name=".shortcuts.RecoveryActivity"
+            android:label="@string/Recovery"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".RestartUIActivity"
+            android:name=".shortcuts.RestartUIActivity"
+            android:label="@string/SystemUI"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".ScreenoffActivity"
+            android:name=".shortcuts.ScreenOffActivity"
+            android:label="@string/ScreenOff"
             android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
 
         <receiver
