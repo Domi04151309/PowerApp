@@ -1,0 +1,4 @@
+- Add confirmation dialogs
+- Add shortcuts
+- Fix about screen
+- Add EDL shortcut
