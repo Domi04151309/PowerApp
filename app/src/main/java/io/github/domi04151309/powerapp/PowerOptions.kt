@@ -5,30 +5,19 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 
-class PowerOptions(private val context: Context) {
+class PowerOptions(private val context: Context, private val dialog: Boolean = false) {
 
     private fun shell(command: String) {
         try {
-            try {
-                AlertDialog.Builder(context)
-                        .setTitle(R.string.confirm_dialog)
-                        .setMessage(R.string.confirm_dialog_summary)
-                        .setPositiveButton(android.R.string.ok) { _, _ ->
-                            Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
-                        }
-                        .setNegativeButton(android.R.string.cancel) { _, _ -> }
-                        .show()
-            } catch (e: Exception) {
-                Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
-            }
+            Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
         } catch (e: Exception) {
-            try {
+            if (dialog) {
                 AlertDialog.Builder(context)
                         .setTitle(R.string.action_failed)
                         .setMessage(R.string.action_failed_summary)
                         .setPositiveButton(android.R.string.ok) { _, _ -> }
                         .show()
-            } catch (e: Exception) {
+            } else {
                 Toast.makeText(context,R.string.action_failed_summary,Toast.LENGTH_LONG).show()
             }
             Log.e("Superuser", e.toString())

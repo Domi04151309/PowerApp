@@ -9,6 +9,7 @@ class ShutdownActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         PowerOptions(this).shutdown()
+        finish()
     }
 
 }

@@ -1,5 +1,6 @@
 package io.github.domi04151309.powerapp
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -30,31 +31,31 @@ class MainActivity : AppCompatActivity() {
                 actionBar.elevation = 0f
         }
 
-        val po = PowerOptions(this)
+        val po = PowerOptions(this, true)
 
         findViewById<View>(R.id.shutdown).setOnClickListener {
-            po.shutdown()
+            askBefore { po.shutdown() }
         }
         findViewById<View>(R.id.reboot).setOnClickListener {
-            po.reboot()
+            askBefore { po.reboot() }
         }
         findViewById<View>(R.id.recovery).setOnClickListener {
-            po.rebootIntoRecovery()
+            askBefore { po.rebootIntoRecovery() }
         }
         findViewById<View>(R.id.bootloader).setOnClickListener {
-            po.rebootIntoBootloader()
+            askBefore { po.rebootIntoBootloader() }
         }
         findViewById<View>(R.id.edl).setOnClickListener {
-            po.rebootIntoEDL()
+            askBefore { po.rebootIntoEDL() }
         }
         findViewById<View>(R.id.soft_reboot).setOnClickListener {
-            po.softReboot()
+            askBefore { po.softReboot() }
         }
         findViewById<View>(R.id.system_ui).setOnClickListener {
-            po.restartSystemUI()
+            askBefore { po.restartSystemUI() }
         }
         findViewById<View>(R.id.screen_off).setOnClickListener {
-            po.turnOffScreen()
+            askBefore { po.turnOffScreen() }
         }
         findViewById<View>(R.id.root).setOnClickListener {
             val p: Process
@@ -81,5 +82,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         startActivity(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+    }
+
+    private fun askBefore(function : () -> Unit) {
+        AlertDialog.Builder(this)
+                .setTitle(R.string.confirm_dialog)
+                .setMessage(R.string.confirm_dialog_summary)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    function()
+                }
+                .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                .show()
     }
 }

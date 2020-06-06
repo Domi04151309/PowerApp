@@ -9,6 +9,7 @@ class SoftRebootActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         PowerOptions(this).softReboot()
+        finish()
     }
 
 }
