@@ -1,15 +1,11 @@
 package io.github.domi04151309.powerapp.shortcuts
 
-import android.app.Activity
-import android.os.Bundle
 import io.github.domi04151309.powerapp.PowerOptions
 
-class BootloaderActivity : Activity() {
+class BootloaderActivity : ShortcutActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onOpened() {
+        super.onOpened()
         PowerOptions(this).rebootIntoBootloader()
-        finish()
     }
-
 }
