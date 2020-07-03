@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import androidx.preference.PreferenceManager
 
 import java.io.DataOutputStream
 import java.io.IOException
@@ -85,13 +86,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun askBefore(function : () -> Unit) {
-        AlertDialog.Builder(this)
-                .setTitle(R.string.confirm_dialog)
-                .setMessage(R.string.confirm_dialog_summary)
-                .setPositiveButton(android.R.string.ok) { _, _ ->
-                    function()
-                }
-                .setNegativeButton(android.R.string.cancel) { _, _ -> }
-                .show()
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("confirm_dialog", true)) {
+            AlertDialog.Builder(this)
+                    .setTitle(R.string.confirm_dialog)
+                    .setMessage(R.string.confirm_dialog_summary)
+                    .setPositiveButton(android.R.string.ok) { _, _ ->
+                        function()
+                    }
+                    .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                    .show()
+        } else {
+            function()
+        }
     }
 }

@@ -10,9 +10,11 @@ import androidx.preference.PreferenceManager
 
 class Preferences : AppCompatActivity() {
 
-    private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { _, _ ->
-        startActivity(Intent(this@Preferences, MainActivity::class.java))
-        finish()
+    private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == "AppTheme") {
+            startActivity(Intent(this@Preferences, MainActivity::class.java))
+            finish()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

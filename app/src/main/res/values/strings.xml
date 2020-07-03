@@ -19,8 +19,10 @@
 
     <string name="root">Request Root</string>
     <string name="pref">Settings</string>
-    <string name="pref_theme">Change Theme</string>
+    <string name="pref_theme">Change theme</string>
     <string name="pref_theme_summary">Choose between light, dark and black theme</string>
+    <string name="pref_confirm_dialog">Confirm dialog</string>
+    <string name="pref_confirm_dialog_summary">Ask for confirmation before performing an action</string>
     <string-array name="pref_theme_array_display">
         <item>Light</item>
         <item>Dark</item>

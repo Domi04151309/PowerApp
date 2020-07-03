@@ -9,6 +9,13 @@
         android:summary="@string/pref_theme_summary"
         android:title="@string/pref_theme" />
 
+    <SwitchPreference
+        android:defaultValue="true"
+        android:icon="@drawable/ic_dialog"
+        android:key="confirm_dialog"
+        android:summary="@string/pref_confirm_dialog_summary"
+        android:title="@string/pref_confirm_dialog" />
+
     <Preference
         android:key="about"
         android:title="@string/about"
