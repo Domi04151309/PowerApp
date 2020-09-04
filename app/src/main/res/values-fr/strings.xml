@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Gestion de l'énergie</string>
+    <string name="app_by">Power App par Domi04151309</string>
+
+    <string name="Shutdown">Éteindre</string>
+    <string name="Reboot">Redémarrer</string>
+    <string name="Recovery">Redémarrer vers l'outil de récupération</string>
+    <string name="Bootloader">Redémarrer vers le chargeur de démarrage</string>
+    <string name="EDL">Redémarrer vers l'EDL</string>
+    <string name="SoftReboot">Redémarrage logiciel</string>
+    <string name="SystemUI">Redémarrer l'interface utilisateur</string>
+    <string name="ScreenOff">Éteindre l'écran</string>
+
+    <string name="confirm_dialog">Veuillez confirmer</string>
+    <string name="confirm_dialog_summary">Voulez-vous vraiment réaliser l'action sélectionnée ?</string>
+
+    <string name="action_failed">Échec de l'opération</string>
+    <string name="action_failed_summary">Votre appareil doit être rooté. Veuillez activer le root.</string>
+
+    <string name="root">Demander l'accès Root</string>
+    <string name="pref">Paramètres</string>
+    <string name="pref_theme">Thème de l'application</string>
+    <string name="pref_theme_summary">Vous avez le choix entre les thèmes clair, sombre et noir</string>
+    <string name="pref_confirm_dialog">Confirmer les actions</string>
+    <string name="pref_confirm_dialog_summary">Demander une confirmation avant d'effectuer une action</string>
+    <string-array name="pref_theme_array_display">
+        <item>Clair</item>
+        <item>Sombre</item>
+        <item>Noir</item>
+    </string-array>
+    <string-array name="pref_theme_array" translatable="false">
+        <item>light</item>
+        <item>dark</item>
+        <item>black</item>
+    </string-array>
+
+    <string name="about">À propos</string>
+    <string name="about_summary">À propos de l'application</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_github">De nouvelles versions sont susceptibles d'être disponibles sur <a href="https://github.com/Domi04151309/Power-App-for-Android">GitHub</a>. Cette application est (et sera toujours) un logiciel libre. Ne payez pas pour cette application.</string>
+    <string name="about_license">Cette application est distribuée selon les termes et de la <a href="https://github.com/Domi04151309/Power-App-for-Android/blob/master/LICENSE">licence publique générale GNU version 3.0</a></string>
+    <string name="about_damage">Aucun des développeurs qui ont travaillé sur cette application ne pourrait être tenu responsable en cas de dommages à votre appareil.</string>
+    <string name="about_icons">Icônes par <a href="https://icons8.com/">Icons8</a> et <a href="https://material.io/resources/icons/">Google</a>.</string>
+</resources>
