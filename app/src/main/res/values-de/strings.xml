@@ -32,8 +32,8 @@
     <string name="about">Über</string>
     <string name="about_summary">Über die App</string>
     <string name="about_version">Version %1$s</string>
-    <string name="about_github">Möglicherweise sind neuere Versionen auf <a href="https://github.com/Domi04151309/Power-App-for-Android">GitHub</a> verfügbar. Diese App ist und bleibt freie Software. Zahlen Sie nicht für diese App.</string>
-    <string name="about_license">Diese App wird unter den Bedingungen der <a href="https://github.com/Domi04151309/Power-App-for-Android/blob/master/LICENSE">GNU General Public License v3.0</a> zur Verfügung gestellt.</string>
+    <string name="about_github">Möglicherweise sind neuere Versionen auf <a href="https://github.com/Domi04151309/PowerApp">GitHub</a> verfügbar. Diese App ist und bleibt freie Software. Zahlen Sie nicht für diese App.</string>
+    <string name="about_license">Diese App wird unter den Bedingungen der <a href="https://github.com/Domi04151309/PowerApp/blob/master/LICENSE">GNU General Public License v3.0</a> zur Verfügung gestellt.</string>
     <string name="about_damage">Ich bin nicht für Schäden an Ihrem Gerät verantwortlich.</string>
     <string name="about_icons">Icons von <a href="https://icons8.com/">Icons8</a> und <a href="https://material.io/resources/icons/">Google</a>.</string>
 </resources>

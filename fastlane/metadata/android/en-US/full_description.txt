@@ -15,5 +15,5 @@ I am not responsible for any damage to your device!
 - Themes
 
 <font color="#2467d6"><b>Related Links</b></font>
-Source code: <a href="https://github.com/Domi04151309/Power-App-for-Android">https://github.com/Domi04151309/Power-App-for-Android</a>
+Source code: <a href="https://github.com/Domi04151309/PowerApp">https://github.com/Domi04151309/PowerApp</a>
 Website: <a href="https://domi04151309.github.io/Android/Powerapp">https://domi04151309.github.io/Android/Powerapp</a>
