@@ -1,4 +1,4 @@
-package io.github.domi04151309.powerapp.shortcuts
+package io.github.domi04151309.powerapp.activities.shortcuts
 
 import android.annotation.SuppressLint
 import android.app.Activity

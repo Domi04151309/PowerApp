@@ -1,4 +1,4 @@
-package io.github.domi04151309.powerapp
+package io.github.domi04151309.powerapp.activities
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -8,6 +8,9 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import androidx.preference.PreferenceManager
+import io.github.domi04151309.powerapp.helpers.PowerOptions
+import io.github.domi04151309.powerapp.R
+import io.github.domi04151309.powerapp.helpers.Theme
 
 import java.io.DataOutputStream
 import java.io.IOException
@@ -70,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-        findViewById<View>(R.id.prefBtn).setOnClickListener { startActivity(Intent(this@MainActivity, Preferences::class.java)) }
+        findViewById<View>(R.id.prefBtn).setOnClickListener { startActivity(Intent(this@MainActivity, SettingsActivity::class.java)) }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {

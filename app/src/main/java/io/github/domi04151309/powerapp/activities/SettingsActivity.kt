@@ -1,4 +1,4 @@
-package io.github.domi04151309.powerapp
+package io.github.domi04151309.powerapp.activities
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import io.github.domi04151309.powerapp.R
+import io.github.domi04151309.powerapp.helpers.Theme
 
-class Preferences : AppCompatActivity() {
+class SettingsActivity : AppCompatActivity() {
 
     private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == "AppTheme") {
-            startActivity(Intent(this@Preferences, MainActivity::class.java))
+            startActivity(Intent(this@SettingsActivity, MainActivity::class.java))
             finish()
         }
     }

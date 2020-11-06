@@ -1,9 +1,10 @@
-package io.github.domi04151309.powerapp
+package io.github.domi04151309.powerapp.helpers
 
 import android.app.AlertDialog
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
+import io.github.domi04151309.powerapp.R
 
 class PowerOptions(private val context: Context, private val dialog: Boolean = false) {
 

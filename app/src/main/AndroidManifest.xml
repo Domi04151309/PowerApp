@@ -17,14 +17,14 @@
         android:theme="@style/LaunchTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".AboutActivity"
+            android:name=".activities.AboutActivity"
             android:label="@string/about"
-            android:parentActivityName=".Preferences">
+            android:parentActivityName=".activities.SettingsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.github.domi04151309.powerapp.Preferences" />
+                android:value="io.github.domi04151309.powerapp.activities.SettingsActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,15 +35,15 @@
                        android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".Preferences"
+            android:name=".activities.SettingsActivity"
             android:label="@string/pref"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.github.domi04151309.powerapp.MainActivity" />
+                android:value="io.github.domi04151309.powerapp.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".shortcuts.ShutdownActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.ShutdownActivity"
             android:label="@string/Shutdown"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.RebootActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.RebootActivity"
             android:label="@string/Reboot"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.BootloaderActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.BootloaderActivity"
             android:label="@string/Bootloader"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -70,7 +70,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.EDLActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.EDLActivity"
             android:label="@string/EDL"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -79,7 +79,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.SoftRebootActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.SoftRebootActivity"
             android:label="@string/SoftReboot"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -88,7 +88,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.RecoveryActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.RecoveryActivity"
             android:label="@string/Recovery"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -97,7 +97,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.RestartUIActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.RestartUIActivity"
             android:label="@string/SystemUI"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -106,7 +106,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".shortcuts.ScreenOffActivity"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.ScreenOffActivity"
             android:label="@string/ScreenOff"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -116,7 +116,7 @@
         </activity>
 
         <receiver
-            android:name=".OnBootCompleted"
+            android:name=".receivers.BootCompletedReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -125,7 +125,7 @@
         </receiver>
 
         <service
-            android:name=".qs.Shutdown"
+            android:name=".services.ShutdownTileService"
             android:icon="@drawable/ic_shutdown"
             android:label="@string/Shutdown"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -138,7 +138,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name=".qs.Reboot"
+            android:name=".services.RebootTileService"
             android:icon="@drawable/ic_reboot"
             android:label="@string/Reboot"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -151,7 +151,7 @@
                 android:value="true" />
         </service>
         <service
-            android:name=".qs.RestartSystemUI"
+            android:name=".services.RestartSystemUITileService"
             android:icon="@drawable/ic_restart"
             android:label="@string/SystemUI"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
