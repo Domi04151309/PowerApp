@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val actionBar = supportActionBar!!
+        val actionBar = supportActionBar ?: return
         actionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         actionBar.setDisplayShowCustomEnabled(true)
         actionBar.setCustomView(R.layout.action_bar)

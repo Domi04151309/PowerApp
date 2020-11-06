@@ -10,7 +10,7 @@ import io.github.domi04151309.powerapp.R
 @SuppressLint("Registered")
 open class ShortcutActivity : Activity() {
 
-    open fun onOpened() { }
+    open fun onOpened() {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -18,7 +18,7 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
                         .setPositiveButton(android.R.string.ok) { _, _ -> }
                         .show()
             } else {
-                Toast.makeText(context,R.string.action_failed_summary,Toast.LENGTH_LONG).show()
+                Toast.makeText(context, R.string.action_failed_summary, Toast.LENGTH_LONG).show()
             }
             Log.e("Superuser", e.toString())
         }

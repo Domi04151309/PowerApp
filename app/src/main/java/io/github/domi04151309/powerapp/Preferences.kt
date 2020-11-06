@@ -32,7 +32,7 @@ class Preferences : AppCompatActivity() {
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_general)
-            findPreference<Preference>("about")!!.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            findPreference<Preference>("about")?.onPreferenceClickListener = Preference.OnPreferenceClickListener {
                 startActivity(Intent(context, AboutActivity::class.java))
                 true
             }

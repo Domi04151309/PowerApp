@@ -13,10 +13,10 @@ import io.github.domi04151309.powerapp.qs.Shutdown
 class OnBootCompleted : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        if(intent.action == Intent.ACTION_BOOT_COMPLETED && Build.VERSION.SDK_INT >= 24) {
-            TileService.requestListeningState(context, ComponentName(context , Shutdown::class.java))
-            TileService.requestListeningState(context, ComponentName(context , Reboot::class.java))
-            TileService.requestListeningState(context, ComponentName(context , RestartSystemUI::class.java))
+        if (intent.action == Intent.ACTION_BOOT_COMPLETED && Build.VERSION.SDK_INT >= 24) {
+            TileService.requestListeningState(context, ComponentName(context, Shutdown::class.java))
+            TileService.requestListeningState(context, ComponentName(context, Reboot::class.java))
+            TileService.requestListeningState(context, ComponentName(context, RestartSystemUI::class.java))
         }
     }
 }
