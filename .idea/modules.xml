@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android-Power-App.iml" filepath="$PROJECT_DIR$/Android-Power-App.iml" group="Android-Power-App" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Android-Power-App/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PowerApp.iml" filepath="$PROJECT_DIR$/.idea/modules/PowerApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PowerApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PowerApp.app.iml" />
     </modules>
   </component>
 </project>
