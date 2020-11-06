@@ -6,18 +6,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
 import io.github.domi04151309.powerapp.R
+import io.github.domi04151309.powerapp.helpers.P
 import io.github.domi04151309.powerapp.helpers.Theme
 
 class SettingsActivity : AppCompatActivity() {
-
-    private val spChanged = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == "AppTheme") {
-            startActivity(Intent(this@SettingsActivity, MainActivity::class.java))
-            finish()
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Theme.check(this)
@@ -27,11 +20,30 @@ class SettingsActivity : AppCompatActivity() {
                 .beginTransaction()
                 .replace(R.id.settings, SettingsFragment())
                 .commit()
-        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(spChanged)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
+
+        private val prefsChangedListener =
+                SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+                    if (key == P.PREF_THEME) requireActivity().recreate()
+                }
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            preferenceManager.sharedPreferences.registerOnSharedPreferenceChangeListener(
+                    prefsChangedListener
+            )
+        }
+
+        override fun onDestroy() {
+            super.onDestroy()
+            preferenceManager.sharedPreferences.unregisterOnSharedPreferenceChangeListener(
+                    prefsChangedListener
+            )
+        }
+
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_general)
             findPreference<Preference>("about")?.onPreferenceClickListener = Preference.OnPreferenceClickListener {

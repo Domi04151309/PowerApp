@@ -10,12 +10,18 @@ import android.view.View
 import androidx.preference.PreferenceManager
 import io.github.domi04151309.powerapp.helpers.PowerOptions
 import io.github.domi04151309.powerapp.R
+import io.github.domi04151309.powerapp.helpers.P
 import io.github.domi04151309.powerapp.helpers.Theme
 
 import java.io.DataOutputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
+
+    private var themeId = ""
+    private fun getThemeId(): String =
+            PreferenceManager.getDefaultSharedPreferences(this)
+                    .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Theme.check(this)
@@ -74,21 +80,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
         findViewById<View>(R.id.prefBtn).setOnClickListener { startActivity(Intent(this@MainActivity, SettingsActivity::class.java)) }
+
+        themeId = getThemeId()
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            onBackPressed()
-            return true
+    override fun onStart() {
+        super.onStart()
+
+        if (getThemeId() != themeId) {
+            themeId = getThemeId()
+            recreate()
         }
-        return super.onKeyDown(keyCode, event)
     }
 
-    override fun onBackPressed() {
-        startActivity(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-    }
-
-    private fun askBefore(function : () -> Unit) {
+    private fun askBefore(function: () -> Unit) {
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("confirm_dialog", true)) {
             AlertDialog.Builder(this)
                     .setTitle(R.string.confirm_dialog)

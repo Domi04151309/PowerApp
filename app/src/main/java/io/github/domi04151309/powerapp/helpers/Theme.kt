@@ -12,7 +12,7 @@ internal object Theme {
 
     fun check(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        when (prefs.getString("AppTheme", "light")) {
+        when (prefs.getString(P.PREF_THEME, P.PREF_THEME_DEFAULT)) {
             "light" -> {
                 context.setTheme(R.style.AppThemeLight)
                 recent(context, R.color.colorPrimary)
