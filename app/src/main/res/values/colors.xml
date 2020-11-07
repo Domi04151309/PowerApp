@@ -6,9 +6,9 @@
     <color name="dark">#303030</color>
     <color name="navigationBarColorBlack">#000001</color>
 
-    <color name="red">#E73737</color>
-    <color name="green">#0CBE8B</color>
-    <color name="orange">#EB7300</color>
-    <color name="yellow">#EBD100</color>
-    <color name="blue">#0088EB</color>
+    <color name="red">#d50000</color>
+    <color name="green">#00C853</color>
+    <color name="orange">#FF6D00</color>
+    <color name="yellow">#FFD600</color>
+    <color name="blue">#2962FF</color>
 </resources>

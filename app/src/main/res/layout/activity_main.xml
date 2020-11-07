@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="?dialogPreferredPadding"
+        android:padding="?dialogPreferredPadding"
         android:orientation="vertical">
 
         <Button
@@ -80,7 +80,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="?dialogPreferredPadding"
+            android:layout_marginTop="?dialogPreferredPadding"
             android:orientation="horizontal">
 
             <Button
