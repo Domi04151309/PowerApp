@@ -7,8 +7,8 @@ android {
         applicationId "io.github.domi04151309.powerapp"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 187
-        versionName "1.8.7"
+        versionCode 190
+        versionName "1.9.0"
     }
     buildTypes {
         debug {

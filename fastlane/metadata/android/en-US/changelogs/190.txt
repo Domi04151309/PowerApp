@@ -1,0 +1,1 @@
+This version comes with a refined design and updates the app's dependencies.
