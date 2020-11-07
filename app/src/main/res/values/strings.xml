@@ -24,14 +24,16 @@
     <string name="pref_confirm_dialog">Confirm dialog</string>
     <string name="pref_confirm_dialog_summary">Ask for confirmation before performing an action</string>
     <string-array name="pref_theme_array_display">
-        <item>Light</item>
-        <item>Dark</item>
-        <item>Black</item>
+        <item>Light theme</item>
+        <item>Dark theme</item>
+        <item>Black theme</item>
+        <item>Follow system theme</item>
     </string-array>
     <string-array name="pref_theme_array" translatable="false">
         <item>light</item>
         <item>dark</item>
         <item>black</item>
+        <item>auto</item>
     </string-array>
 
     <string name="about">About</string>

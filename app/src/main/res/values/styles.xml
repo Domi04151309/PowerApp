@@ -4,7 +4,7 @@
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
-    <style name="Patch">
+    <style name="AppThemePatch">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="dialogTheme">@style/Theme.AppCompat.Dialog.Alert</item>
         <item name="android:dialogCornerRadius" tools:targetApi="28">8dp</item>
@@ -23,19 +23,19 @@
     </style>
 
     <style name="AppThemeDark" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/dark</item>
-        <item name="colorPrimaryDark">@color/dark</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowBackground">@color/dark</item>
-        <item name="android:navigationBarColor">@color/dark</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
         <item name="actionBarTheme">@style/ActionBarThemeDark</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
 
     <style name="AppThemeBlack" parent="AppThemeDark">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="android:windowBackground">@color/black</item>
+        <item name="colorPrimary">@color/colorPrimaryBlack</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryBlack</item>
+        <item name="android:windowBackground">@color/colorPrimaryBlack</item>
         <item name="android:navigationBarColor">@color/navigationBarColorBlack</item>
     </style>
 
@@ -50,10 +50,6 @@
     <style name="Button" parent="Widget.AppCompat.Button">
         <item name="android:backgroundTint">@color/colorAccent</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">14sp</item>
         <item name="android:stateListAnimator">@null</item>
     </style>
 
