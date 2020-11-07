@@ -3,7 +3,7 @@
     <shortcut
         android:shortcutId="shutdown"
         android:enabled="true"
-        android:icon="@drawable/ic_shutdown"
+        android:icon="@drawable/ic_round_shutdown"
         android:shortcutShortLabel="@string/Shutdown"
         android:shortcutLongLabel="@string/Shutdown"
         android:shortcutDisabledMessage="@string/Shutdown">
@@ -18,7 +18,7 @@
     <shortcut
         android:shortcutId="reboot"
         android:enabled="true"
-        android:icon="@drawable/ic_reboot"
+        android:icon="@drawable/ic_round_reboot"
         android:shortcutShortLabel="@string/Reboot"
         android:shortcutLongLabel="@string/Reboot"
         android:shortcutDisabledMessage="@string/Reboot">
@@ -33,7 +33,7 @@
     <shortcut
         android:shortcutId="recovery"
         android:enabled="true"
-        android:icon="@drawable/ic_recovery"
+        android:icon="@drawable/ic_round_recovery"
         android:shortcutShortLabel="@string/Recovery"
         android:shortcutLongLabel="@string/Recovery"
         android:shortcutDisabledMessage="@string/Recovery">
@@ -48,7 +48,7 @@
     <shortcut
         android:shortcutId="bootloader"
         android:enabled="true"
-        android:icon="@drawable/ic_bootloader"
+        android:icon="@drawable/ic_round_bootloader"
         android:shortcutShortLabel="@string/Bootloader"
         android:shortcutLongLabel="@string/Bootloader"
         android:shortcutDisabledMessage="@string/Bootloader">
@@ -63,7 +63,7 @@
     <shortcut
         android:shortcutId="edl"
         android:enabled="true"
-        android:icon="@drawable/ic_edl"
+        android:icon="@drawable/ic_round_edl"
         android:shortcutShortLabel="@string/EDL"
         android:shortcutLongLabel="@string/EDL"
         android:shortcutDisabledMessage="@string/EDL">
@@ -78,7 +78,7 @@
     <shortcut
         android:shortcutId="sortreboot"
         android:enabled="true"
-        android:icon="@drawable/ic_restart"
+        android:icon="@drawable/ic_round_soft_reboot"
         android:shortcutShortLabel="@string/SoftReboot"
         android:shortcutLongLabel="@string/SoftReboot"
         android:shortcutDisabledMessage="@string/SoftReboot">
@@ -93,7 +93,7 @@
     <shortcut
         android:shortcutId="restartsystemui"
         android:enabled="true"
-        android:icon="@drawable/ic_restart"
+        android:icon="@drawable/ic_round_restart_system_ui"
         android:shortcutShortLabel="@string/SystemUI"
         android:shortcutLongLabel="@string/SystemUI"
         android:shortcutDisabledMessage="@string/SystemUI">
@@ -108,7 +108,7 @@
     <shortcut
         android:shortcutId="screenoff"
         android:enabled="true"
-        android:icon="@drawable/ic_screen_off"
+        android:icon="@drawable/ic_round_screen_off"
         android:shortcutShortLabel="@string/ScreenOff"
         android:shortcutLongLabel="@string/ScreenOff"
         android:shortcutDisabledMessage="@string/ScreenOff">
