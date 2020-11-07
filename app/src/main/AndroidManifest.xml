@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/LaunchTheme"
+        android:theme="@style/AppThemeSplash"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".activities.AboutActivity"
@@ -24,7 +24,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.domi04151309.powerapp.activities.SettingsActivity" />
         </activity>
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +38,7 @@
             </intent-filter>
 
             <meta-data android:name="android.app.shortcuts"
-                       android:resource="@xml/shortcuts" />
+                android:resource="@xml/shortcuts" />
         </activity>
         <activity
             android:name=".activities.SettingsActivity"

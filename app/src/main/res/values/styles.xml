@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="LaunchTheme" parent="Theme.AppCompat">
-        <item name="android:windowBackground">@color/dark</item>
+    <style name="AppThemeSplash" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
     <style name="Patch">
