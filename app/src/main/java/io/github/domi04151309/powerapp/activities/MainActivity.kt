@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.reboot).setOnClickListener {
             askBefore { po.reboot() }
         }
+        findViewById<View>(R.id.safemode).setOnClickListener {
+            askBefore { po.safemode() }
+        }
         findViewById<View>(R.id.recovery).setOnClickListener {
             askBefore { po.rebootIntoRecovery() }
         }
