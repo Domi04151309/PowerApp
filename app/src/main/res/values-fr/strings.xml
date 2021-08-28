@@ -4,6 +4,7 @@
 
     <string name="Shutdown">Éteindre</string>
     <string name="Reboot">Redémarrer</string>
+    <string name="Safemode">Redémarrer en mode sans échec</string>
     <string name="Recovery">Redémarrer vers l\'outil de récupération</string>
     <string name="Bootloader">Redémarrer vers le chargeur de démarrage</string>
     <string name="EDL">Redémarrer vers l\'EDL</string>

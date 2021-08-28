@@ -34,6 +34,11 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
         shell("reboot")
     }
 
+    fun safemode() {
+        shell("setprop persist.sys.safemode 1")
+        shell("reboot")
+    }
+
     fun rebootIntoRecovery() {
         shell("reboot recovery")
     }

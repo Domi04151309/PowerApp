@@ -4,6 +4,7 @@
 
     <string name="Shutdown">Shutdown</string>
     <string name="Reboot">Reboot</string>
+    <string name="Safemode">Reboot into safe mode</string>
     <string name="Recovery">Reboot into Recovery</string>
     <string name="Bootloader">Reboot into Bootloader</string>
     <string name="EDL">Reboot into EDL</string>
