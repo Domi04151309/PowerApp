@@ -30,14 +30,6 @@
             style="@style/BorderlessButton" />
 
         <Button
-            android:id="@+id/safemode"
-            style="@style/BorderlessButton"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/frame"
-            android:drawableStart="@drawable/ic_round_soft_reboot"
-            android:text="@string/Safemode" />
-
-        <Button
             android:id="@+id/recovery"
             android:layout_width="match_parent"
             android:layout_height="@dimen/frame"
@@ -76,6 +68,14 @@
             android:drawableStart="@drawable/ic_round_restart_system_ui"
             android:text="@string/SystemUI"
             style="@style/BorderlessButton" />
+
+        <Button
+            android:id="@+id/safemode"
+            style="@style/BorderlessButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frame"
+            android:drawableStart="@drawable/ic_safemode"
+            android:text="@string/Safemode" />
 
         <Button
             android:id="@+id/screen_off"
