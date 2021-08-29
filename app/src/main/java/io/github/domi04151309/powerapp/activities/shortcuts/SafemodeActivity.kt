@@ -10,6 +10,6 @@ class SafemodeActivity : ShortcutActivity() {
     }
 
     override fun onOpened() {
-        PowerOptions(this).safemode()
+        PowerOptions(this).rebootIntoSafemode()
     }
 }
