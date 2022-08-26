@@ -183,6 +183,14 @@
                 android:name="android.service.quicksettings.ACTIVE_TILE"
                 android:value="true" />
         </service>
+        <service
+            android:name=".services.ControlService"
+            android:permission="android.permission.BIND_CONTROLS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.controls.ControlsProviderService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
