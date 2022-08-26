@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             askBefore { po.reboot() }
         }
         findViewById<View>(R.id.safemode).setOnClickListener {
-            askBefore { po.rebootIntoSafemode() }
+            askBefore { po.rebootIntoSafeMode() }
         }
         findViewById<View>(R.id.recovery).setOnClickListener {
             askBefore { po.rebootIntoRecovery() }

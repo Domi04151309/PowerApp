@@ -3,13 +3,13 @@ package io.github.domi04151309.powerapp.activities.shortcuts
 import io.github.domi04151309.powerapp.helpers.PowerOptions
 import io.github.domi04151309.powerapp.R
 
-class SafemodeActivity : ShortcutActivity() {
+class SafeModeActivity : ShortcutActivity() {
 
     override fun getShortcutName(): String {
-        return resources.getString(R.string.Safemode)
+        return resources.getString(R.string.SafeMode)
     }
 
     override fun onOpened() {
-        PowerOptions(this).rebootIntoSafemode()
+        PowerOptions(this).rebootIntoSafeMode()
     }
 }

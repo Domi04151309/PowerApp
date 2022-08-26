@@ -67,8 +67,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="io.github.domi04151309.powerapp.activities.shortcuts.SafemodeActivity"
-            android:label="@string/Safemode"
+            android:name="io.github.domi04151309.powerapp.activities.shortcuts.SafeModeActivity"
+            android:label="@string/SafeMode"
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
