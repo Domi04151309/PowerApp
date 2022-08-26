@@ -17,39 +17,40 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.settings, SettingsFragment())
-                .commit()
+            .beginTransaction()
+            .replace(R.id.settings, SettingsFragment())
+            .commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
 
         private val prefsChangedListener =
-                SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-                    if (key == P.PREF_THEME) requireActivity().recreate()
-                }
+            SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+                if (key == P.PREF_THEME) requireActivity().recreate()
+            }
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            preferenceManager.sharedPreferences.registerOnSharedPreferenceChangeListener(
-                    prefsChangedListener
+            preferenceManager.sharedPreferences?.registerOnSharedPreferenceChangeListener(
+                prefsChangedListener
             )
         }
 
         override fun onDestroy() {
             super.onDestroy()
-            preferenceManager.sharedPreferences.unregisterOnSharedPreferenceChangeListener(
-                    prefsChangedListener
+            preferenceManager.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(
+                prefsChangedListener
             )
         }
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_general)
-            findPreference<Preference>("about")?.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                startActivity(Intent(context, AboutActivity::class.java))
-                true
-            }
+            findPreference<Preference>("about")?.onPreferenceClickListener =
+                Preference.OnPreferenceClickListener {
+                    startActivity(Intent(context, AboutActivity::class.java))
+                    true
+                }
         }
     }
 }
