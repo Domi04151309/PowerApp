@@ -12,7 +12,7 @@
         </shape>
     </item>
     <item
-        android:drawable="@drawable/ic_restart"
+        android:drawable="@drawable/ic_safe_mode"
         android:height="@dimen/inner_circle"
         android:width="@dimen/inner_circle"
         android:gravity="center"/>

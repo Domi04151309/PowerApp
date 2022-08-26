@@ -4,6 +4,7 @@
 
     <string name="Shutdown">Herunterfahren</string>
     <string name="Reboot">Neu starten</string>
+    <string name="SafeMode">In den sicheren Modus neu starten</string>
     <string name="Recovery">In den Wiederherstellungsmodus neu starten</string>
     <string name="Bootloader">In den Bootloader neu starten</string>
     <string name="EDL">In EDL neu starten</string>

@@ -31,6 +31,21 @@
     </shortcut>
 
     <shortcut
+        android:shortcutId="reboot"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_safe_mode"
+        android:shortcutShortLabel="@string/SafeMode"
+        android:shortcutLongLabel="@string/SafeMode"
+        android:shortcutDisabledMessage="@string/SafeMode">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.domi04151309.powerapp"
+            android:targetClass="io.github.domi04151309.powerapp.activities.shortcuts.SafeModeActivity" />
+
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
         android:shortcutId="recovery"
         android:enabled="true"
         android:icon="@drawable/ic_round_recovery"
