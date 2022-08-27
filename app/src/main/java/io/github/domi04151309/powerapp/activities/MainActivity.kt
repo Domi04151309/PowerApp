@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private var themeId = ""
     private fun getThemeId(): String =
-            PreferenceManager.getDefaultSharedPreferences(this)
-                    .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
+        PreferenceManager.getDefaultSharedPreferences(this)
+            .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Theme.set(this)
@@ -81,7 +81,14 @@ class MainActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-        findViewById<View>(R.id.prefBtn).setOnClickListener { startActivity(Intent(this@MainActivity, SettingsActivity::class.java)) }
+        findViewById<View>(R.id.prefBtn).setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    SettingsActivity::class.java
+                )
+            )
+        }
 
         themeId = getThemeId()
     }
@@ -96,15 +103,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun askBefore(function: () -> Unit) {
-        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("confirm_dialog", true)) {
+        if (PreferenceManager.getDefaultSharedPreferences(this)
+                .getBoolean("confirm_dialog", true)
+        ) {
             AlertDialog.Builder(this)
-                    .setTitle(R.string.confirm_dialog)
-                    .setMessage(R.string.confirm_dialog_summary)
-                    .setPositiveButton(android.R.string.ok) { _, _ ->
-                        function()
-                    }
-                    .setNegativeButton(android.R.string.cancel) { _, _ -> }
-                    .show()
+                .setTitle(R.string.confirm_dialog)
+                .setMessage(R.string.confirm_dialog_summary)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    function()
+                }
+                .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                .show()
         } else {
             function()
         }

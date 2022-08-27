@@ -14,9 +14,18 @@ class BootCompletedReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED && Build.VERSION.SDK_INT >= 24) {
-            TileService.requestListeningState(context, ComponentName(context, ShutdownTileService::class.java))
-            TileService.requestListeningState(context, ComponentName(context, RebootTileService::class.java))
-            TileService.requestListeningState(context, ComponentName(context, RestartSystemUITileService::class.java))
+            TileService.requestListeningState(
+                context,
+                ComponentName(context, ShutdownTileService::class.java)
+            )
+            TileService.requestListeningState(
+                context,
+                ComponentName(context, RebootTileService::class.java)
+            )
+            TileService.requestListeningState(
+                context,
+                ComponentName(context, RestartSystemUITileService::class.java)
+            )
         }
     }
 }

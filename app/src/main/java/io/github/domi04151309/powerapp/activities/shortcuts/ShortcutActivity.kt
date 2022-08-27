@@ -28,10 +28,13 @@ open class ShortcutActivity : Activity() {
 
     private fun setupShortcut() {
         setResult(
-                RESULT_OK,
-                Intent().putExtra(Intent.EXTRA_SHORTCUT_INTENT, Intent(this, this::class.java))
-                        .putExtra(Intent.EXTRA_SHORTCUT_NAME, getShortcutName())
-                        .putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, ShortcutIconResource.fromContext(this, R.mipmap.ic_launcher))
+            RESULT_OK,
+            Intent().putExtra(Intent.EXTRA_SHORTCUT_INTENT, Intent(this, this::class.java))
+                .putExtra(Intent.EXTRA_SHORTCUT_NAME, getShortcutName())
+                .putExtra(
+                    Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+                    ShortcutIconResource.fromContext(this, R.mipmap.ic_launcher)
+                )
         )
     }
 }

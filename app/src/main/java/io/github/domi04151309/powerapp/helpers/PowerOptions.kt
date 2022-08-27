@@ -14,10 +14,10 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
         } catch (e: Exception) {
             if (dialog) {
                 AlertDialog.Builder(context)
-                        .setTitle(R.string.action_failed)
-                        .setMessage(R.string.action_failed_summary)
-                        .setPositiveButton(android.R.string.ok) { _, _ -> }
-                        .show()
+                    .setTitle(R.string.action_failed)
+                    .setMessage(R.string.action_failed_summary)
+                    .setPositiveButton(android.R.string.ok) { _, _ -> }
+                    .show()
             } else {
                 Toast.makeText(context, R.string.action_failed_summary, Toast.LENGTH_LONG).show()
             }
