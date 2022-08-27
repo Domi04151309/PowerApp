@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                     .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Theme.check(this)
+        Theme.set(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

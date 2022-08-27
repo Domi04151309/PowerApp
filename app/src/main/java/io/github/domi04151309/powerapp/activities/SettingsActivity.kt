@@ -13,7 +13,7 @@ import io.github.domi04151309.powerapp.helpers.Theme
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Theme.check(this)
+        Theme.set(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         supportFragmentManager
