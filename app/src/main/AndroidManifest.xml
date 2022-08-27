@@ -6,6 +6,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,18 @@
         <activity
             android:name=".activities.AboutActivity"
             android:label="@string/about"
+            android:launchMode="singleTop"
             android:parentActivityName=".activities.SettingsActivity" />
+        <activity
+            android:name=".activities.ContributorActivity"
+            android:label="@string/about_contributors"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.AboutActivity" />
+        <activity
+            android:name=".activities.LibraryActivity"
+            android:label="@string/about_libraries"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.AboutActivity" />
         <activity
             android:name=".activities.MainActivity"
             android:launchMode="singleTop" />

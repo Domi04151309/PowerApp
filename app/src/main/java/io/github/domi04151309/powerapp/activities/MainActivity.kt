@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
 import android.view.View
 import androidx.preference.PreferenceManager
 import io.github.domi04151309.powerapp.helpers.PowerOptions

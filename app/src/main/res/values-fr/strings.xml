@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Gestion de l\'énergie</string>
-    <string name="app_by">Power App par Domi04151309</string>
 
     <string name="Shutdown">Éteindre</string>
     <string name="Reboot">Redémarrer</string>
@@ -30,12 +29,4 @@
         <item>Thème noir</item>
         <item>Utiliser le thème du système</item>
     </string-array>
-
-    <string name="about">À propos</string>
-    <string name="about_summary">À propos de l\'application</string>
-    <string name="about_version">Version %1$s</string>
-    <string name="about_github">De nouvelles versions sont susceptibles d\'être disponibles sur <a href="https://github.com/Domi04151309/PowerApp">GitHub</a>. Cette application est (et sera toujours) un logiciel libre. Ne payez pas pour cette application.</string>
-    <string name="about_license">Cette application est distribuée selon les termes et de la <a href="https://github.com/Domi04151309/PowerApp/LICENSE">licence publique générale GNU version 3.0</a></string>
-    <string name="about_damage">Aucun des développeurs qui ont travaillé sur cette application ne pourrait être tenu responsable en cas de dommages à votre appareil.</string>
-    <string name="about_icons">Icônes par <a href="https://icons8.com/">Icons8</a> et <a href="https://material.io/resources/icons/">Google</a>.</string>
 </resources>
