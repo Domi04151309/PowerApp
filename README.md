@@ -1,4 +1,4 @@
-![App Icon](https://raw.githubusercontent.com/Domi04151309/PowerApp/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+![App Icon](https://raw.githubusercontent.com/Domi04151309/PowerApp/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp)
 # Power App for Android™
 This App offers you a lot of different power options like shutting down, rebooting, soft rebooting, rebooting into recovery, rebooting into the bootloader, restarting System UI and turning off your screen.
 
@@ -8,9 +8,14 @@ This App offers you a lot of different power options like shutting down, rebooti
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80">](https://f-droid.org/packages/io.github.domi04151309.powerapp/)
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-     alt="Get it on Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=io.github.domi04151309.powerapp)
+
+## Donate
+
+Support the development by donating.
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=487FTCX52P9WA">
+	<img src="https://img.shields.io/badge/-Donate-black?style=for-the-badge&logo=paypal" alt="Donate">
+</a>
 
 ## Previews
 <img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" width="18%" />
