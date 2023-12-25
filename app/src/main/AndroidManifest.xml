@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight"
+        android:theme="@style/Theme.Material3.DayNight"
         tools:ignore="GoogleAppIndexingWarning"
         android:dataExtractionRules="@xml/data_extraction_rules"
         tools:targetApi="s">
@@ -37,6 +37,7 @@
         <activity
             android:name=".activities.MainActivity"
             android:launchMode="singleTop"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

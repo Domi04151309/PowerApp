@@ -4,9 +4,10 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.P
 import io.github.domi04151309.powerapp.helpers.PowerOptions
@@ -14,30 +15,10 @@ import java.io.DataOutputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
-    companion object {
-        private const val ACTION_BAR_ELEVATION = 16f
-    }
-
-    private fun setupActionBar() {
-        val actionBar = supportActionBar ?: return
-        actionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-        actionBar.setDisplayShowCustomEnabled(true)
-        actionBar.setCustomView(R.layout.action_bar)
-        actionBar.elevation = 0f
-        val scrollView = findViewById<View>(R.id.scrollView)
-        scrollView.viewTreeObserver.addOnScrollChangedListener {
-            if (scrollView.scrollY > 0) {
-                actionBar.elevation = ACTION_BAR_ELEVATION
-            } else {
-                actionBar.elevation = 0f
-            }
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupActionBar()
 
         val powerOptions = PowerOptions(this, true)
 
@@ -68,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.screen_off).setOnClickListener {
             askBefore { powerOptions.turnOffScreen() }
         }
-        findViewById<View>(R.id.root).setOnClickListener {
+        findViewById<ExtendedFloatingActionButton>(R.id.floating_action_button).setOnClickListener {
             val process: Process
             try {
                 process = Runtime.getRuntime().exec("su")
@@ -80,13 +61,14 @@ class MainActivity : AppCompatActivity() {
                 exception.printStackTrace()
             }
         }
-        findViewById<View>(R.id.prefBtn).setOnClickListener {
+        findViewById<MaterialToolbar>(R.id.toolbar).setOnMenuItemClickListener {
             startActivity(
                 Intent(
                     this@MainActivity,
                     SettingsActivity::class.java,
                 ),
             )
+            true
         }
     }
 
