@@ -1,28 +1,28 @@
 <resources>
-    <string name="app_name">Gestion de l\'énergie</string>
+    <string name="app_name">Gestion de l\’énergie</string>
 
     <string name="Shutdown">Éteindre</string>
     <string name="Reboot">Redémarrer</string>
     <string name="SafeMode">Redémarrer en mode sans échec</string>
-    <string name="Recovery">Redémarrer vers l\'outil de récupération</string>
+    <string name="Recovery">Redémarrer vers l\’outil de récupération</string>
     <string name="Bootloader">Redémarrer vers le chargeur de démarrage</string>
-    <string name="EDL">Redémarrer vers l\'EDL</string>
+    <string name="EDL">Redémarrer vers l\’EDL</string>
     <string name="SoftReboot">Redémarrage logiciel</string>
-    <string name="SystemUI">Redémarrer l\'interface utilisateur</string>
-    <string name="ScreenOff">Éteindre l\'écran</string>
+    <string name="SystemUI">Redémarrer l\’interface utilisateur</string>
+    <string name="ScreenOff">Éteindre l\’écran</string>
 
     <string name="confirm_dialog">Veuillez confirmer</string>
-    <string name="confirm_dialog_summary">Voulez-vous vraiment réaliser l\'action sélectionnée ?</string>
+    <string name="confirm_dialog_summary">Voulez-vous vraiment réaliser l\’action sélectionnée ?</string>
 
-    <string name="action_failed">Échec de l\'opération</string>
+    <string name="action_failed">Échec de l\’opération</string>
     <string name="action_failed_summary">Votre appareil doit être rooté. Veuillez activer le root.</string>
 
-    <string name="root">Demander l\'accès Root</string>
+    <string name="root">Demander l\’accès Root</string>
     <string name="pref">Paramètres</string>
-    <string name="pref_theme">Thème de l\'application</string>
+    <string name="pref_theme">Thème de l\’application</string>
     <string name="pref_theme_summary">Vous avez le choix entre les thèmes clair, sombre et noir</string>
     <string name="pref_confirm_dialog">Confirmer les actions</string>
-    <string name="pref_confirm_dialog_summary">Demander une confirmation avant d\'effectuer une action</string>
+    <string name="pref_confirm_dialog_summary">Demander une confirmation avant d\’effectuer une action</string>
     <string-array name="pref_theme_array_display">
         <item>Thème clair</item>
         <item>Thème sombre</item>
