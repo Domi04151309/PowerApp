@@ -5,12 +5,11 @@ import android.app.ActivityManager
 import android.content.Context
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
-import androidx.preference.PreferenceManager
 import androidx.core.content.ContextCompat
+import androidx.preference.PreferenceManager
 import io.github.domi04151309.powerapp.R
 
 internal object Theme {
-
     fun set(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         when (prefs.getString(P.PREF_THEME, P.PREF_THEME_DEFAULT)) {
@@ -42,12 +41,16 @@ internal object Theme {
         context.setTheme(R.style.AppThemePatch)
     }
 
-    private fun recent(context: Context, color: Int) {
-        val taskDescription = ActivityManager.TaskDescription(
-            context.getString(R.string.app_name),
-            BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher),
-            ContextCompat.getColor(context, color)
-        )
+    private fun recent(
+        context: Context,
+        color: Int,
+    ) {
+        val taskDescription =
+            ActivityManager.TaskDescription(
+                context.getString(R.string.app_name),
+                BitmapFactory.decodeResource(context.resources, R.mipmap.ic_launcher),
+                ContextCompat.getColor(context, color),
+            )
         (context as Activity).setTaskDescription(taskDescription)
     }
 }

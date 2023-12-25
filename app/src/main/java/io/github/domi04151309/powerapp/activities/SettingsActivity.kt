@@ -11,7 +11,6 @@ import io.github.domi04151309.powerapp.helpers.P
 import io.github.domi04151309.powerapp.helpers.Theme
 
 class SettingsActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         Theme.set(this)
         super.onCreate(savedInstanceState)
@@ -24,7 +23,6 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
-
         private val prefsChangedListener =
             SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
                 if (key == P.PREF_THEME) requireActivity().recreate()
@@ -33,18 +31,21 @@ class SettingsActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             preferenceManager.sharedPreferences?.registerOnSharedPreferenceChangeListener(
-                prefsChangedListener
+                prefsChangedListener,
             )
         }
 
         override fun onDestroy() {
             super.onDestroy()
             preferenceManager.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(
-                prefsChangedListener
+                prefsChangedListener,
             )
         }
 
-        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        override fun onCreatePreferences(
+            savedInstanceState: Bundle?,
+            rootKey: String?,
+        ) {
             addPreferencesFromResource(R.xml.pref_general)
             findPreference<Preference>("about")?.onPreferenceClickListener =
                 Preference.OnPreferenceClickListener {

@@ -7,7 +7,6 @@ import io.github.domi04151309.powerapp.helpers.PowerOptions
 
 @TargetApi(Build.VERSION_CODES.N)
 class RebootTileService : TileService() {
-
     override fun onClick() {
         unlockAndRun {
             PowerOptions(this).reboot()

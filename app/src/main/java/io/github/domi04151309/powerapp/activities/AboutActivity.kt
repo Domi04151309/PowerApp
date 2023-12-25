@@ -106,8 +106,8 @@ class AboutActivity : AppCompatActivity() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("$REPOSITORY_URL/blob/master/LICENSE")
-                    )
+                        Uri.parse("$REPOSITORY_URL/blob/master/LICENSE"),
+                    ),
                 )
                 true
             }

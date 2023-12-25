@@ -2,26 +2,25 @@ package io.github.domi04151309.powerapp.activities
 
 import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.ActionBar
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-import io.github.domi04151309.powerapp.helpers.PowerOptions
 import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.P
+import io.github.domi04151309.powerapp.helpers.PowerOptions
 import io.github.domi04151309.powerapp.helpers.Theme
-
 import java.io.DataOutputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
-
     companion object {
         private const val ACTION_BAR_ELEVATION = 16f
     }
 
     private var themeId = ""
+
     private fun getThemeId(): String =
         PreferenceManager.getDefaultSharedPreferences(this)
             .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
@@ -34,10 +33,11 @@ class MainActivity : AppCompatActivity() {
         actionBar.elevation = 0f
         val scrollView = findViewById<View>(R.id.scrollView)
         scrollView.viewTreeObserver.addOnScrollChangedListener {
-            if (scrollView.scrollY > 0)
+            if (scrollView.scrollY > 0) {
                 actionBar.elevation = ACTION_BAR_ELEVATION
-            else
+            } else {
                 actionBar.elevation = 0f
+            }
         }
     }
 
@@ -92,8 +92,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(
                 Intent(
                     this@MainActivity,
-                    SettingsActivity::class.java
-                )
+                    SettingsActivity::class.java,
+                ),
             )
         }
 

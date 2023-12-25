@@ -7,7 +7,6 @@ import android.os.Bundle
 import io.github.domi04151309.powerapp.R
 
 abstract class ShortcutActivity : Activity() {
-
     open fun onOpened() {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +30,8 @@ abstract class ShortcutActivity : Activity() {
                 .putExtra(Intent.EXTRA_SHORTCUT_NAME, getShortcutName())
                 .putExtra(
                     Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
-                    ShortcutIconResource.fromContext(this, R.mipmap.ic_launcher)
-                )
+                    ShortcutIconResource.fromContext(this, R.mipmap.ic_launcher),
+                ),
         )
     }
 }

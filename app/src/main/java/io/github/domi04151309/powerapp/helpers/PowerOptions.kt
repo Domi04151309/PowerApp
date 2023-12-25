@@ -8,7 +8,6 @@ import io.github.domi04151309.powerapp.R
 import java.io.IOException
 
 class PowerOptions(private val context: Context, private val dialog: Boolean = false) {
-
     private fun shell(command: String) {
         try {
             Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
@@ -24,7 +23,6 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
             }
             Log.e("Superuser", exception.toString())
         }
-
     }
 
     fun shutdown() {
