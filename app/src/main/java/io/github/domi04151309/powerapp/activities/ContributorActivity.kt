@@ -14,12 +14,10 @@ import com.android.volley.toolbox.ImageRequest
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import io.github.domi04151309.powerapp.R
-import io.github.domi04151309.powerapp.helpers.Theme
 import org.json.JSONObject
 
 class ContributorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        Theme.set(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         supportFragmentManager

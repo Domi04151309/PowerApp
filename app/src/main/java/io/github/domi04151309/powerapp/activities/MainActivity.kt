@@ -10,7 +10,6 @@ import androidx.preference.PreferenceManager
 import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.P
 import io.github.domi04151309.powerapp.helpers.PowerOptions
-import io.github.domi04151309.powerapp.helpers.Theme
 import java.io.DataOutputStream
 import java.io.IOException
 
@@ -18,12 +17,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val ACTION_BAR_ELEVATION = 16f
     }
-
-    private var themeId = ""
-
-    private fun getThemeId(): String =
-        PreferenceManager.getDefaultSharedPreferences(this)
-            .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
 
     private fun setupActionBar() {
         val actionBar = supportActionBar ?: return
@@ -42,7 +35,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Theme.set(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupActionBar()
@@ -96,22 +88,11 @@ class MainActivity : AppCompatActivity() {
                 ),
             )
         }
-
-        themeId = getThemeId()
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if (getThemeId() != themeId) {
-            themeId = getThemeId()
-            recreate()
-        }
     }
 
     private fun askBefore(function: () -> Unit) {
         if (PreferenceManager.getDefaultSharedPreferences(this)
-                .getBoolean("confirm_dialog", true)
+                .getBoolean(P.CONFIRM_DIALOG, P.CONFIRM_DIALOG_DEFAULT)
         ) {
             AlertDialog.Builder(this)
                 .setTitle(R.string.confirm_dialog)
