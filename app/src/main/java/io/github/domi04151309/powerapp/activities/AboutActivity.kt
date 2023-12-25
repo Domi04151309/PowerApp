@@ -3,14 +3,13 @@ package io.github.domi04151309.powerapp.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.github.domi04151309.powerapp.BuildConfig
 import io.github.domi04151309.powerapp.R
 
-class AboutActivity : AppCompatActivity() {
+class AboutActivity : BaseActivity() {
     companion object {
         internal const val GITHUB_REPOSITORY: String = "Domi04151309/PowerApp"
         private const val REPOSITORY_URL: String = "https://github.com/$GITHUB_REPOSITORY"
@@ -28,7 +27,7 @@ class AboutActivity : AppCompatActivity() {
     class GeneralPreferenceFragment : PreferenceFragmentCompat() {
         @Suppress("SameReturnValue")
         private fun onIconsClicked(): Boolean {
-            AlertDialog.Builder(requireContext())
+            MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.about_icons)
                 .setItems(resources.getStringArray(R.array.about_icons_array)) { _, which ->
                     startActivity(
@@ -50,7 +49,7 @@ class AboutActivity : AppCompatActivity() {
 
         @Suppress("SameReturnValue")
         private fun onContributorsClicked(): Boolean {
-            AlertDialog.Builder(requireContext())
+            MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.about_privacy)
                 .setMessage(R.string.about_privacy_desc)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
