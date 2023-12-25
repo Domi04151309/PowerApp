@@ -8,14 +8,14 @@
                 android:color="@color/red"/>
 
             <size
-                android:width="24dp"
-                android:height="24dp"/>
+                android:width="@dimen/outer_size"
+                android:height="@dimen/outer_size"/>
         </shape>
     </item>
     <item
         android:drawable="@drawable/ic_shutdown"
-        android:top="12dp"
-        android:start="12dp"
-        android:bottom="12dp"
-        android:end="12dp" />
+        android:top="@dimen/inner_size"
+        android:start="@dimen/inner_size"
+        android:bottom="@dimen/inner_size"
+        android:end="@dimen/inner_size" />
 </layer-list>

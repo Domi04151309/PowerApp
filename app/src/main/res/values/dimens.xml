@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="inner_size">55dp</dimen>
-    <dimen name="outer_size">35dp</dimen>
+    <dimen name="inner_size">12dp</dimen>
+    <dimen name="outer_size">24dp</dimen>
     <dimen name="full_padding">16dp</dimen>
 </resources>
