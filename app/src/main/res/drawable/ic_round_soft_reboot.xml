@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:drawable="@android:color/transparent"
-        android:height="@dimen/frame"
-        android:width="@dimen/frame"/>
-    <item
-        android:gravity="center">
-        <shape android:shape="oval">
-            <size android:width="@dimen/outer_circle" android:height="@dimen/outer_circle"/>
-            <solid android:color="@color/orange"/>
+    <item>
+        <shape
+            android:shape="oval">
+
+            <solid
+                android:color="@color/orange"/>
+
+            <size
+                android:width="24dp"
+                android:height="24dp"/>
         </shape>
     </item>
     <item
         android:drawable="@drawable/ic_restart"
-        android:height="@dimen/inner_circle"
-        android:width="@dimen/inner_circle"
-        android:gravity="center"/>
+        android:top="12dp"
+        android:start="12dp"
+        android:bottom="12dp"
+        android:end="12dp" />
 </layer-list>
