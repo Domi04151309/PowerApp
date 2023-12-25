@@ -22,16 +22,8 @@
 
     <string name="root">Root anfordern</string>
     <string name="pref">Einstellungen</string>
-    <string name="pref_theme">Thema ändern</string>
-    <string name="pref_theme_summary">Wähle zwischen hellem, dunklem und schwarzem Thema</string>
     <string name="pref_confirm_dialog">Bestätigungsdialog</string>
     <string name="pref_confirm_dialog_summary">Vor dem Ausführen einer Aktion nach einer Bestätigung fragen</string>
-    <string-array name="pref_theme_array">
-        <item>Helles Thema</item>
-        <item>Dunkles Thema</item>
-        <item>Schwarzes Thema</item>
-        <item>System Thema benutzen</item>
-    </string-array>
 
     <string name="about">Über</string>
     <string name="about_summary">Über die App</string>

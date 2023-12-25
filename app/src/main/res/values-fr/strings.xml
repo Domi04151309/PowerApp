@@ -19,14 +19,6 @@
 
     <string name="root">Demander l\’accès Root</string>
     <string name="pref">Paramètres</string>
-    <string name="pref_theme">Thème de l\’application</string>
-    <string name="pref_theme_summary">Vous avez le choix entre les thèmes clair, sombre et noir</string>
     <string name="pref_confirm_dialog">Confirmer les actions</string>
     <string name="pref_confirm_dialog_summary">Demander une confirmation avant d\’effectuer une action</string>
-    <string-array name="pref_theme_array_display">
-        <item>Thème clair</item>
-        <item>Thème sombre</item>
-        <item>Thème noir</item>
-        <item>Utiliser le thème du système</item>
-    </string-array>
 </resources>

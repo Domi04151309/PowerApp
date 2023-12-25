@@ -3,6 +3,6 @@
 package io.github.domi04151309.powerapp.helpers
 
 internal object P {
-    const val PREF_THEME = "AppTheme"
-    const val PREF_THEME_DEFAULT = "auto"
+    const val CONFIRM_DIALOG = "confirm_dialog"
+    const val CONFIRM_DIALOG_DEFAULT = true
 }

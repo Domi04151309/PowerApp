@@ -14,14 +14,6 @@
 
     <string name="root">Roottoegangsverzoek</string>
     <string name="pref">Instellingen</string>
-    <string name="pref_theme">Thema wijzigen</string>
-    <string name="pref_theme_summary">Kies tussen een licht, donker of zwart thema</string>
-    <string-array name="pref_theme_array">
-        <item>Licht thema</item>
-        <item>Donker thema</item>
-        <item>Zwart thema</item>
-        <item>Systeem thema</item>
-    </string-array>
 
     <string name="about">Over</string>
     <string name="about_summary">Over de app</string>
