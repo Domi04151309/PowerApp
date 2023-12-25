@@ -1,13 +1,13 @@
 package io.github.domi04151309.powerapp.activities
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.elevation.SurfaceColors
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.adapters.SimpleListAdapter
@@ -18,7 +18,7 @@ import io.github.domi04151309.powerapp.interfaces.RecyclerViewHelperInterface
 import java.io.DataOutputStream
 import java.io.IOException
 
-class MainActivity : AppCompatActivity(), RecyclerViewHelperInterface {
+class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
     companion object {
         private const val LIST_ITEM_SHUTDOWN = 1
         private const val LIST_ITEM_REBOOT = 2
@@ -31,48 +31,51 @@ class MainActivity : AppCompatActivity(), RecyclerViewHelperInterface {
         private const val LIST_ITEM_TURN_OFF_SCREEN = 9
     }
 
-    private fun getListItems() = listOf(
-        SimpleListItem(
-            title = resources.getString(R.string.Shutdown),
-            icon = R.drawable.ic_round_shutdown
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.Reboot),
-            icon = R.drawable.ic_round_reboot
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.SafeMode),
-            icon = R.drawable.ic_round_safe_mode
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.Recovery),
-            icon = R.drawable.ic_round_recovery
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.Bootloader),
-            icon = R.drawable.ic_round_bootloader
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.EDL),
-            icon = R.drawable.ic_round_edl
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.SoftReboot),
-            icon = R.drawable.ic_round_soft_reboot
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.SystemUI),
-            icon = R.drawable.ic_round_restart_system_ui
-        ),
-        SimpleListItem(
-            title = resources.getString(R.string.ScreenOff),
-            icon = R.drawable.ic_round_screen_off
-        ),
-    )
+    private fun getListItems() =
+        listOf(
+            SimpleListItem(
+                title = resources.getString(R.string.Shutdown),
+                icon = R.drawable.ic_round_shutdown,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.Reboot),
+                icon = R.drawable.ic_round_reboot,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.SafeMode),
+                icon = R.drawable.ic_round_safe_mode,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.Recovery),
+                icon = R.drawable.ic_round_recovery,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.Bootloader),
+                icon = R.drawable.ic_round_bootloader,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.EDL),
+                icon = R.drawable.ic_round_edl,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.SoftReboot),
+                icon = R.drawable.ic_round_soft_reboot,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.SystemUI),
+                icon = R.drawable.ic_round_restart_system_ui,
+            ),
+            SimpleListItem(
+                title = resources.getString(R.string.ScreenOff),
+                icon = R.drawable.ic_round_screen_off,
+            ),
+        )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
 
         findViewById<MaterialToolbar>(R.id.toolbar).setOnMenuItemClickListener {
             startActivity(
@@ -122,7 +125,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHelperInterface {
         if (PreferenceManager.getDefaultSharedPreferences(this)
                 .getBoolean(P.CONFIRM_DIALOG, P.CONFIRM_DIALOG_DEFAULT)
         ) {
-            AlertDialog.Builder(this)
+            MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.confirm_dialog)
                 .setMessage(R.string.confirm_dialog_summary)
                 .setPositiveButton(android.R.string.ok) { _, _ ->

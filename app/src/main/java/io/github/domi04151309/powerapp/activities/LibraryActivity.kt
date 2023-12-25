@@ -1,13 +1,12 @@
 package io.github.domi04151309.powerapp.activities
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import io.github.domi04151309.powerapp.R
 
-class LibraryActivity : AppCompatActivity() {
+class LibraryActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)

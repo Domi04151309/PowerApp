@@ -1,9 +1,9 @@
 package io.github.domi04151309.powerapp.helpers
 
-import android.app.AlertDialog
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.github.domi04151309.powerapp.R
 import java.io.IOException
 
@@ -13,7 +13,7 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
             Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
         } catch (exception: IOException) {
             if (dialog) {
-                AlertDialog.Builder(context)
+                MaterialAlertDialogBuilder(context)
                     .setTitle(R.string.action_failed)
                     .setMessage(R.string.action_failed_summary)
                     .setPositiveButton(android.R.string.ok) { _, _ -> }

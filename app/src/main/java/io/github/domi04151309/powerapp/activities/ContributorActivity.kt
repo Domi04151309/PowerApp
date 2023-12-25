@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -16,7 +15,7 @@ import com.android.volley.toolbox.Volley
 import io.github.domi04151309.powerapp.R
 import org.json.JSONObject
 
-class ContributorActivity : AppCompatActivity() {
+class ContributorActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
