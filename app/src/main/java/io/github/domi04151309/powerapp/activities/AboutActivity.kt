@@ -12,7 +12,6 @@ import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.Theme
 
 class AboutActivity : AppCompatActivity() {
-
     companion object {
         internal const val GITHUB_REPOSITORY: String = "Domi04151309/PowerApp"
         private const val REPOSITORY_URL: String = "https://github.com/$GITHUB_REPOSITORY"
@@ -29,21 +28,69 @@ class AboutActivity : AppCompatActivity() {
     }
 
     class GeneralPreferenceFragment : PreferenceFragmentCompat() {
+        @Suppress("SameReturnValue")
+        private fun onIconsClicked(): Boolean {
+            AlertDialog.Builder(requireContext())
+                .setTitle(R.string.about_icons)
+                .setItems(resources.getStringArray(R.array.about_icons_array)) { _, which ->
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(
+                                when (which) {
+                                    0 -> "https://icons8.com/"
+                                    1 -> "https://fonts.google.com/icons?selected=Material+Icons"
+                                    else -> "about:blank"
+                                },
+                            ),
+                        ),
+                    )
+                }
+                .show()
+            return true
+        }
 
-        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        @Suppress("SameReturnValue")
+        private fun onContributorsClicked(): Boolean {
+            AlertDialog.Builder(requireContext())
+                .setTitle(R.string.about_privacy)
+                .setMessage(R.string.about_privacy_desc)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    startActivity(Intent(requireContext(), ContributorActivity::class.java))
+                }
+                .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                .setNeutralButton(R.string.about_privacy_policy) { _, _ ->
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(
+                                "https://docs.github.com/en/github/site-policy/github-privacy-statement",
+                            ),
+                        ),
+                    )
+                }
+                .show()
+            return true
+        }
+
+        override fun onCreatePreferences(
+            savedInstanceState: Bundle?,
+            rootKey: String?,
+        ) {
             addPreferencesFromResource(R.xml.pref_about)
             findPreference<Preference>("app_version")?.apply {
-                summary = requireContext().getString(
-                    R.string.about_app_version_desc,
-                    BuildConfig.VERSION_NAME,
-                    BuildConfig.VERSION_CODE
-                )
+                summary =
+                    requireContext().getString(
+                        R.string.about_app_version_desc,
+                        BuildConfig.VERSION_NAME,
+                        BuildConfig.VERSION_CODE,
+                    )
                 setOnPreferenceClickListener {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("$REPOSITORY_URL/releases")
-                        )
+                            Uri.parse("$REPOSITORY_URL/releases"),
+                        ),
                     )
                     true
                 }
@@ -65,43 +112,10 @@ class AboutActivity : AppCompatActivity() {
                 true
             }
             findPreference<Preference>("icons")?.setOnPreferenceClickListener {
-                AlertDialog.Builder(requireContext())
-                    .setTitle(R.string.about_icons)
-                    .setItems(resources.getStringArray(R.array.about_icons_array)) { _, which ->
-                        startActivity(
-                            Intent(
-                                Intent.ACTION_VIEW, Uri.parse(
-                                    when (which) {
-                                        0 -> "https://icons8.com/"
-                                        1 -> "https://fonts.google.com/icons?selected=Material+Icons"
-                                        else -> "about:blank"
-                                    }
-                                )
-                            )
-                        )
-                    }
-                    .show()
-                true
+                onIconsClicked()
             }
             findPreference<Preference>("contributors")?.setOnPreferenceClickListener {
-                AlertDialog.Builder(requireContext())
-                    .setTitle(R.string.about_privacy)
-                    .setMessage(R.string.about_privacy_desc)
-                    .setPositiveButton(android.R.string.ok) { _, _ ->
-                        startActivity(Intent(requireContext(), ContributorActivity::class.java))
-                    }
-                    .setNegativeButton(android.R.string.cancel) { _, _ -> }
-                    .setNeutralButton(R.string.about_privacy_policy) { _, _ ->
-                        startActivity(
-                            Intent(
-                                Intent.ACTION_VIEW, Uri.parse(
-                                    "https://docs.github.com/en/github/site-policy/github-privacy-statement"
-                                )
-                            )
-                        )
-                    }
-                    .show()
-                true
+                onContributorsClicked()
             }
             findPreference<Preference>("libraries")?.setOnPreferenceClickListener {
                 startActivity(Intent(requireContext(), LibraryActivity::class.java))

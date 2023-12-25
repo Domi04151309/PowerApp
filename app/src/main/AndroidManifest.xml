@@ -33,13 +33,11 @@
             android:label="@string/about_libraries"
             android:launchMode="singleTop"
             android:parentActivityName=".activities.AboutActivity" />
-        <activity
-            android:name=".activities.MainActivity"
-            android:launchMode="singleTop" />
 
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppThemeSplash"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

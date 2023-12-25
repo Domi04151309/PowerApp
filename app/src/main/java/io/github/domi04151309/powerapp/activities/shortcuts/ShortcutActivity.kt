@@ -1,14 +1,12 @@
 package io.github.domi04151309.powerapp.activities.shortcuts
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.Intent.ShortcutIconResource
 import android.os.Bundle
 import io.github.domi04151309.powerapp.R
 
-@SuppressLint("Registered")
-open class ShortcutActivity : Activity() {
+abstract class ShortcutActivity : Activity() {
 
     open fun onOpened() {}
 

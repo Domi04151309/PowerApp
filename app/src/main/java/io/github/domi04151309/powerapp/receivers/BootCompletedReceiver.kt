@@ -13,7 +13,7 @@ import io.github.domi04151309.powerapp.services.ShutdownTileService
 class BootCompletedReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action == Intent.ACTION_BOOT_COMPLETED && Build.VERSION.SDK_INT >= 24) {
+        if (intent.action == Intent.ACTION_BOOT_COMPLETED && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             TileService.requestListeningState(
                 context,
                 ComponentName(context, ShutdownTileService::class.java)

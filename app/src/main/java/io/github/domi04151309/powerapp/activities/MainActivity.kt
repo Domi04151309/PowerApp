@@ -17,16 +17,16 @@ import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        private const val ACTION_BAR_ELEVATION = 16f
+    }
+
     private var themeId = ""
     private fun getThemeId(): String =
         PreferenceManager.getDefaultSharedPreferences(this)
             .getString(P.PREF_THEME, P.PREF_THEME_DEFAULT) ?: P.PREF_THEME_DEFAULT
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        Theme.set(this)
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+    private fun setupActionBar() {
         val actionBar = supportActionBar ?: return
         actionBar.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         actionBar.setDisplayShowCustomEnabled(true)
@@ -35,50 +35,57 @@ class MainActivity : AppCompatActivity() {
         val scrollView = findViewById<View>(R.id.scrollView)
         scrollView.viewTreeObserver.addOnScrollChangedListener {
             if (scrollView.scrollY > 0)
-                actionBar.elevation = 16f
+                actionBar.elevation = ACTION_BAR_ELEVATION
             else
                 actionBar.elevation = 0f
         }
+    }
 
-        val po = PowerOptions(this, true)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        Theme.set(this)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setupActionBar()
+
+        val powerOptions = PowerOptions(this, true)
 
         findViewById<View>(R.id.shutdown).setOnClickListener {
-            askBefore { po.shutdown() }
+            askBefore { powerOptions.shutdown() }
         }
         findViewById<View>(R.id.reboot).setOnClickListener {
-            askBefore { po.reboot() }
+            askBefore { powerOptions.reboot() }
         }
         findViewById<View>(R.id.safemode).setOnClickListener {
-            askBefore { po.rebootIntoSafeMode() }
+            askBefore { powerOptions.rebootIntoSafeMode() }
         }
         findViewById<View>(R.id.recovery).setOnClickListener {
-            askBefore { po.rebootIntoRecovery() }
+            askBefore { powerOptions.rebootIntoRecovery() }
         }
         findViewById<View>(R.id.bootloader).setOnClickListener {
-            askBefore { po.rebootIntoBootloader() }
+            askBefore { powerOptions.rebootIntoBootloader() }
         }
         findViewById<View>(R.id.edl).setOnClickListener {
-            askBefore { po.rebootIntoEDL() }
+            askBefore { powerOptions.rebootIntoEDL() }
         }
         findViewById<View>(R.id.soft_reboot).setOnClickListener {
-            askBefore { po.softReboot() }
+            askBefore { powerOptions.softReboot() }
         }
         findViewById<View>(R.id.system_ui).setOnClickListener {
-            askBefore { po.restartSystemUI() }
+            askBefore { powerOptions.restartSystemUI() }
         }
         findViewById<View>(R.id.screen_off).setOnClickListener {
-            askBefore { po.turnOffScreen() }
+            askBefore { powerOptions.turnOffScreen() }
         }
         findViewById<View>(R.id.root).setOnClickListener {
-            val p: Process
+            val process: Process
             try {
-                p = Runtime.getRuntime().exec("su")
-                val os = DataOutputStream(p.outputStream)
-                os.writeBytes("echo access granted\n")
-                os.writeBytes("exit\n")
-                os.flush()
-            } catch (e: IOException) {
-                e.printStackTrace()
+                process = Runtime.getRuntime().exec("su")
+                val output = DataOutputStream(process.outputStream)
+                output.writeBytes("echo access granted\n")
+                output.writeBytes("exit\n")
+                output.flush()
+            } catch (exception: IOException) {
+                exception.printStackTrace()
             }
         }
         findViewById<View>(R.id.prefBtn).setOnClickListener {

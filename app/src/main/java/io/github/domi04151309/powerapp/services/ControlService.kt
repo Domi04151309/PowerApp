@@ -34,18 +34,18 @@ class ControlService : ControlsProviderService() {
         return Flow.Publisher { subscriber ->
             updateSubscriber = subscriber
 
-            val pi = PendingIntent.getActivity(
+            val pendingIntent = PendingIntent.getActivity(
                 baseContext, 0, Intent(),
                 PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
             )
 
-            for ((key, value) in items) {
+            for ((id, title) in items) {
                 subscriber.onNext(
                     Control.StatelessBuilder(
-                        key,
-                        pi
+                        id,
+                        pendingIntent
                     )
-                        .setTitle(resources.getString(value))
+                        .setTitle(resources.getString(title))
                         .setZone(resources.getString(R.string.app_name))
                         .setStructure(resources.getString(R.string.app_name))
                         .setDeviceType(DeviceTypes.TYPE_REMOTE_CONTROL)
@@ -57,7 +57,7 @@ class ControlService : ControlsProviderService() {
     }
 
     private fun loadStatefulControl(subscriber: Flow.Subscriber<in Control>?, id: String) {
-        val pi = PendingIntent.getActivity(
+        val pendingIntent = PendingIntent.getActivity(
             baseContext, 0, Intent(),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
@@ -65,9 +65,9 @@ class ControlService : ControlsProviderService() {
         subscriber?.onNext(
             Control.StatefulBuilder(
                 id,
-                pi
+                pendingIntent
             )
-                .setTitle(resources.getString(items[id] ?: throw IllegalStateException()))
+                .setTitle(resources.getString(items[id] ?: error("Impossible state.")))
                 .setZone(resources.getString(R.string.app_name))
                 .setStructure(resources.getString(R.string.app_name))
                 .setDeviceType(DeviceTypes.TYPE_REMOTE_CONTROL)
@@ -82,8 +82,12 @@ class ControlService : ControlsProviderService() {
         return Flow.Publisher { subscriber ->
             updateSubscriber = subscriber
             subscriber.onSubscribe(object : Flow.Subscription {
-                override fun request(n: Long) {}
-                override fun cancel() {}
+                override fun request(n: Long) {
+                    // Do nothing.
+                }
+                override fun cancel() {
+                    // Do nothing.
+                }
             })
             controlIds.forEach { id ->
                 loadStatefulControl(subscriber, id)

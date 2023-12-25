@@ -5,13 +5,14 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import io.github.domi04151309.powerapp.R
+import java.io.IOException
 
 class PowerOptions(private val context: Context, private val dialog: Boolean = false) {
 
     private fun shell(command: String) {
         try {
             Runtime.getRuntime().exec(arrayOf("su", "-c", command)).waitFor()
-        } catch (e: Exception) {
+        } catch (exception: IOException) {
             if (dialog) {
                 AlertDialog.Builder(context)
                     .setTitle(R.string.action_failed)
@@ -21,7 +22,7 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
             } else {
                 Toast.makeText(context, R.string.action_failed_summary, Toast.LENGTH_LONG).show()
             }
-            Log.e("Superuser", e.toString())
+            Log.e("Superuser", exception.toString())
         }
 
     }
