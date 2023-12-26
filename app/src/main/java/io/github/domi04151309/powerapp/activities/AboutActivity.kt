@@ -11,8 +11,9 @@ import io.github.domi04151309.powerapp.R
 
 class AboutActivity : BaseActivity() {
     companion object {
-        internal const val GITHUB_REPOSITORY: String = "Domi04151309/PowerApp"
-        private const val REPOSITORY_URL: String = "https://github.com/$GITHUB_REPOSITORY"
+        private const val REPOSITORY: String = "Domi04151309/PowerApp"
+        private const val BRANCH: String = "master"
+        private const val REPOSITORY_URL: String = "https://github.com/$REPOSITORY"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,12 +49,17 @@ class AboutActivity : BaseActivity() {
         }
 
         @Suppress("SameReturnValue")
-        private fun onContributorsClicked(): Boolean {
+        private fun onExternalClicked(link: String): Boolean {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.about_privacy)
                 .setMessage(R.string.about_privacy_desc)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
-                    startActivity(Intent(requireContext(), ContributorActivity::class.java))
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(link),
+                        ),
+                    )
                 }
                 .setNegativeButton(android.R.string.cancel) { _, _ -> }
                 .setNeutralButton(R.string.about_privacy_policy) { _, _ ->
@@ -83,36 +89,23 @@ class AboutActivity : BaseActivity() {
                         BuildConfig.VERSION_CODE,
                     )
                 setOnPreferenceClickListener {
-                    startActivity(
-                        Intent(
-                            Intent.ACTION_VIEW,
-                            Uri.parse("$REPOSITORY_URL/releases"),
-                        ),
-                    )
-                    true
+                    onExternalClicked("$REPOSITORY_URL/releases")
                 }
             }
             findPreference<Preference>("github")?.apply {
                 summary = REPOSITORY_URL
                 setOnPreferenceClickListener {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(REPOSITORY_URL)))
-                    true
+                    onExternalClicked(REPOSITORY_URL)
                 }
             }
             findPreference<Preference>("license")?.setOnPreferenceClickListener {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("$REPOSITORY_URL/blob/master/LICENSE"),
-                    ),
-                )
-                true
+                onExternalClicked("$REPOSITORY_URL/blob/$BRANCH/LICENSE")
             }
             findPreference<Preference>("icons")?.setOnPreferenceClickListener {
                 onIconsClicked()
             }
             findPreference<Preference>("contributors")?.setOnPreferenceClickListener {
-                onContributorsClicked()
+                onExternalClicked("$REPOSITORY_URL/graphs/contributors")
             }
             findPreference<Preference>("libraries")?.setOnPreferenceClickListener {
                 startActivity(Intent(requireContext(), LibraryActivity::class.java))
