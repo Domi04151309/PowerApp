@@ -18,7 +18,7 @@ Support the development by donating.
 </a>
 
 ## Previews
-<img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" width="18%" />
+<img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" width="18%" />
 
 *<a href="https://en.wikipedia.org/wiki/Rooting_(Android)">What is rooting?</a>*
 <i style="color:gray;">Android, Google Play and the Google Play logo are trademarks of Google LLC.</i>
