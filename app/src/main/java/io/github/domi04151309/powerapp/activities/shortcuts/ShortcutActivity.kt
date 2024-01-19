@@ -19,9 +19,7 @@ abstract class ShortcutActivity : Activity() {
         finish()
     }
 
-    open fun getShortcutName(): String {
-        return ""
-    }
+    open fun getShortcutName(): String = ""
 
     private fun setupShortcut() {
         setResult(

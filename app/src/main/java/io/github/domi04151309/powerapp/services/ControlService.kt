@@ -30,8 +30,8 @@ class ControlService : ControlsProviderService() {
             Pair("screen_off", R.string.ScreenOff),
         )
 
-    override fun createPublisherForAllAvailable(): Flow.Publisher<Control> {
-        return Flow.Publisher { subscriber ->
+    override fun createPublisherForAllAvailable(): Flow.Publisher<Control> =
+        Flow.Publisher { subscriber ->
             updateSubscriber = subscriber
 
             val pendingIntent =
@@ -57,7 +57,6 @@ class ControlService : ControlsProviderService() {
             }
             subscriber.onComplete()
         }
-    }
 
     private fun loadStatefulControl(
         subscriber: Flow.Subscriber<in Control>?,
@@ -80,15 +79,16 @@ class ControlService : ControlsProviderService() {
                 .setZone(resources.getString(R.string.app_name))
                 .setStructure(resources.getString(R.string.app_name))
                 .setDeviceType(DeviceTypes.TYPE_REMOTE_CONTROL)
-                .setStatus(Control.STATUS_OK).setControlTemplate(
+                .setStatus(Control.STATUS_OK)
+                .setControlTemplate(
                     StatelessTemplate(id),
                 )
                 .build(),
         )
     }
 
-    override fun createPublisherFor(controlIds: MutableList<String>): Flow.Publisher<Control> {
-        return Flow.Publisher { subscriber ->
+    override fun createPublisherFor(controlIds: MutableList<String>): Flow.Publisher<Control> =
+        Flow.Publisher { subscriber ->
             updateSubscriber = subscriber
             subscriber.onSubscribe(
                 object : Flow.Subscription {
@@ -105,7 +105,6 @@ class ControlService : ControlsProviderService() {
                 loadStatefulControl(subscriber, id)
             }
         }
-    }
 
     override fun performControlAction(
         controlId: String,
