@@ -1,4 +1,4 @@
-![App Icon](https://raw.githubusercontent.com/Domi04151309/PowerApp/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp)
+![App Icon](https://raw.githubusercontent.com/Domi04151309/PowerApp/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp)
 # Power App for Android™
 This App offers you a lot of different power options like shutting down, rebooting, soft rebooting, rebooting into recovery, rebooting into the bootloader, restarting System UI and turning off your screen.
 
@@ -18,7 +18,7 @@ Support the development by donating.
 </a>
 
 ## Previews
-<img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" width="18%" />
+<img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="18%" /><img src="https://raw.githubusercontent.com/Domi04151309/PowerApp/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" width="18%" />
 
 *<a href="https://en.wikipedia.org/wiki/Rooting_(Android)">What is rooting?</a>*
 <i style="color:gray;">Android, Google Play and the Google Play logo are trademarks of Google LLC.</i>
