@@ -127,14 +127,14 @@ class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
     }
 
     companion object {
-        private const val LIST_ITEM_SHUTDOWN = 1
-        private const val LIST_ITEM_REBOOT = 2
-        private const val LIST_ITEM_REBOOT_INTO_SAFE_MODE = 3
-        private const val LIST_ITEM_REBOOT_INTO_RECOVERY = 4
-        private const val LIST_ITEM_REBOOT_INTO_BOOTLOADER = 5
-        private const val LIST_ITEM_REBOOT_INTO_EDL = 6
-        private const val LIST_ITEM_SOFT_REBOOT = 7
-        private const val LIST_ITEM_RESTART_SYSTEM_UI = 8
-        private const val LIST_ITEM_TURN_OFF_SCREEN = 9
+        private const val LIST_ITEM_SHUTDOWN = 0
+        private const val LIST_ITEM_REBOOT = 1
+        private const val LIST_ITEM_REBOOT_INTO_SAFE_MODE = 2
+        private const val LIST_ITEM_REBOOT_INTO_RECOVERY = 3
+        private const val LIST_ITEM_REBOOT_INTO_BOOTLOADER = 4
+        private const val LIST_ITEM_REBOOT_INTO_EDL = 5
+        private const val LIST_ITEM_SOFT_REBOOT = 6
+        private const val LIST_ITEM_RESTART_SYSTEM_UI = 7
+        private const val LIST_ITEM_TURN_OFF_SCREEN = 8
     }
 }
