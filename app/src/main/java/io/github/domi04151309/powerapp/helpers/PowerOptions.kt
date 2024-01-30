@@ -21,7 +21,7 @@ class PowerOptions(private val context: Context, private val dialog: Boolean = f
             } else {
                 Toast.makeText(context, R.string.action_failed_summary, Toast.LENGTH_LONG).show()
             }
-            Log.e("Superuser", exception.toString())
+            Log.e(this::class.simpleName, exception.toString())
         }
     }
 

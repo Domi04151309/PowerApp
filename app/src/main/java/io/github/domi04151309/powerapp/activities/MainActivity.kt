@@ -79,9 +79,8 @@ class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
             adapter = SimpleListAdapter(getListItems(), this@MainActivity)
         }
         findViewById<ExtendedFloatingActionButton>(R.id.floating_action_button).setOnClickListener {
-            val process: Process
             try {
-                process = Runtime.getRuntime().exec("su")
+                val process = Runtime.getRuntime().exec("su")
                 val output = DataOutputStream(process.outputStream)
                 output.writeBytes("echo access granted\n")
                 output.writeBytes("exit\n")
@@ -94,35 +93,36 @@ class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
 
     override fun onItemClicked(position: Int) {
         val powerOptions = PowerOptions(this, true)
-        askBefore {
-            when (position) {
-                LIST_ITEM_SHUTDOWN -> powerOptions.shutdown()
-                LIST_ITEM_REBOOT -> powerOptions.reboot()
-                LIST_ITEM_REBOOT_INTO_SAFE_MODE -> powerOptions.rebootIntoSafeMode()
-                LIST_ITEM_REBOOT_INTO_RECOVERY -> powerOptions.rebootIntoRecovery()
-                LIST_ITEM_REBOOT_INTO_BOOTLOADER -> powerOptions.rebootIntoBootloader()
-                LIST_ITEM_REBOOT_INTO_EDL -> powerOptions.rebootIntoEDL()
-                LIST_ITEM_SOFT_REBOOT -> powerOptions.softReboot()
-                LIST_ITEM_RESTART_SYSTEM_UI -> powerOptions.restartSystemUI()
-                LIST_ITEM_TURN_OFF_SCREEN -> powerOptions.turnOffScreen()
-            }
+        when (position) {
+            LIST_ITEM_SHUTDOWN -> askBefore(R.string.Shutdown) { powerOptions.shutdown() }
+            LIST_ITEM_REBOOT -> askBefore(R.string.Reboot) { powerOptions.reboot() }
+            LIST_ITEM_REBOOT_INTO_SAFE_MODE -> askBefore(R.string.SafeMode) { powerOptions.rebootIntoSafeMode() }
+            LIST_ITEM_REBOOT_INTO_RECOVERY -> askBefore(R.string.Recovery) { powerOptions.rebootIntoRecovery() }
+            LIST_ITEM_REBOOT_INTO_BOOTLOADER -> askBefore(R.string.Bootloader) { powerOptions.rebootIntoBootloader() }
+            LIST_ITEM_REBOOT_INTO_EDL -> askBefore(R.string.EDL) { powerOptions.rebootIntoEDL() }
+            LIST_ITEM_SOFT_REBOOT -> askBefore(R.string.SoftReboot) { powerOptions.softReboot() }
+            LIST_ITEM_RESTART_SYSTEM_UI -> askBefore(R.string.SystemUI) { powerOptions.restartSystemUI() }
+            LIST_ITEM_TURN_OFF_SCREEN -> askBefore(R.string.ScreenOff) { powerOptions.turnOffScreen() }
         }
     }
 
-    private fun askBefore(function: () -> Unit) {
+    private fun askBefore(
+        resource: Int,
+        lambda: () -> Unit,
+    ) {
         if (PreferenceManager.getDefaultSharedPreferences(this)
                 .getBoolean(P.CONFIRM_DIALOG, P.CONFIRM_DIALOG_DEFAULT)
         ) {
             MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.confirm_dialog)
                 .setMessage(R.string.confirm_dialog_summary)
-                .setPositiveButton(android.R.string.ok) { _, _ ->
-                    function()
+                .setPositiveButton(resource) { _, _ ->
+                    lambda()
                 }
                 .setNegativeButton(android.R.string.cancel) { _, _ -> }
                 .show()
         } else {
-            function()
+            lambda()
         }
     }
 
