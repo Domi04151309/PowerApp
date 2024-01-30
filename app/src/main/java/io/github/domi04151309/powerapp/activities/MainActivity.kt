@@ -22,39 +22,39 @@ class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
     private fun getListItems() =
         listOf(
             SimpleListItem(
-                title = resources.getString(R.string.Shutdown),
+                title = resources.getString(R.string.shutdown),
                 icon = R.drawable.ic_round_shutdown,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.Reboot),
+                title = resources.getString(R.string.reboot),
                 icon = R.drawable.ic_round_reboot,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.SafeMode),
+                title = resources.getString(R.string.reboot_into_safe_mode),
                 icon = R.drawable.ic_round_safe_mode,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.Recovery),
+                title = resources.getString(R.string.reboot_into_recovery),
                 icon = R.drawable.ic_round_recovery,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.Bootloader),
+                title = resources.getString(R.string.reboot_into_bootloader),
                 icon = R.drawable.ic_round_bootloader,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.EDL),
+                title = resources.getString(R.string.reboot_into_edl),
                 icon = R.drawable.ic_round_edl,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.SoftReboot),
+                title = resources.getString(R.string.soft_reboot),
                 icon = R.drawable.ic_round_soft_reboot,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.SystemUI),
+                title = resources.getString(R.string.restart_system_ui),
                 icon = R.drawable.ic_round_restart_system_ui,
             ),
             SimpleListItem(
-                title = resources.getString(R.string.ScreenOff),
+                title = resources.getString(R.string.turn_off_screen),
                 icon = R.drawable.ic_round_screen_off,
             ),
         )
@@ -94,15 +94,42 @@ class MainActivity : BaseActivity(), RecyclerViewHelperInterface {
     override fun onItemClicked(position: Int) {
         val powerOptions = PowerOptions(this, true)
         when (position) {
-            LIST_ITEM_SHUTDOWN -> askBefore(R.string.Shutdown) { powerOptions.shutdown() }
-            LIST_ITEM_REBOOT -> askBefore(R.string.Reboot) { powerOptions.reboot() }
-            LIST_ITEM_REBOOT_INTO_SAFE_MODE -> askBefore(R.string.SafeMode) { powerOptions.rebootIntoSafeMode() }
-            LIST_ITEM_REBOOT_INTO_RECOVERY -> askBefore(R.string.Recovery) { powerOptions.rebootIntoRecovery() }
-            LIST_ITEM_REBOOT_INTO_BOOTLOADER -> askBefore(R.string.Bootloader) { powerOptions.rebootIntoBootloader() }
-            LIST_ITEM_REBOOT_INTO_EDL -> askBefore(R.string.EDL) { powerOptions.rebootIntoEDL() }
-            LIST_ITEM_SOFT_REBOOT -> askBefore(R.string.SoftReboot) { powerOptions.softReboot() }
-            LIST_ITEM_RESTART_SYSTEM_UI -> askBefore(R.string.SystemUI) { powerOptions.restartSystemUI() }
-            LIST_ITEM_TURN_OFF_SCREEN -> askBefore(R.string.ScreenOff) { powerOptions.turnOffScreen() }
+            LIST_ITEM_SHUTDOWN ->
+                askBefore(R.string.shutdown) {
+                    powerOptions.shutdown()
+                }
+            LIST_ITEM_REBOOT ->
+                askBefore(R.string.reboot) {
+                    powerOptions.reboot()
+                }
+            LIST_ITEM_REBOOT_INTO_SAFE_MODE ->
+                askBefore(R.string.reboot_into_safe_mode) {
+                    powerOptions.rebootIntoSafeMode()
+                }
+            LIST_ITEM_REBOOT_INTO_RECOVERY ->
+                askBefore(R.string.reboot_into_recovery) {
+                    powerOptions.rebootIntoRecovery()
+                }
+            LIST_ITEM_REBOOT_INTO_BOOTLOADER ->
+                askBefore(R.string.reboot_into_bootloader) {
+                    powerOptions.rebootIntoBootloader()
+                }
+            LIST_ITEM_REBOOT_INTO_EDL ->
+                askBefore(R.string.reboot_into_edl) {
+                    powerOptions.rebootIntoEDL()
+                }
+            LIST_ITEM_SOFT_REBOOT ->
+                askBefore(R.string.soft_reboot) {
+                    powerOptions.softReboot()
+                }
+            LIST_ITEM_RESTART_SYSTEM_UI ->
+                askBefore(R.string.restart_system_ui) {
+                    powerOptions.restartSystemUI()
+                }
+            LIST_ITEM_TURN_OFF_SCREEN ->
+                askBefore(R.string.turn_off_screen) {
+                    powerOptions.turnOffScreen()
+                }
         }
     }
 

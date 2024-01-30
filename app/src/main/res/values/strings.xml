@@ -4,15 +4,15 @@
 
     <string name="loading">Loading</string>
 
-    <string name="Shutdown">Shutdown</string>
-    <string name="Reboot">Reboot</string>
-    <string name="SafeMode">Reboot into Safe Mode</string>
-    <string name="Recovery">Reboot into Recovery</string>
-    <string name="Bootloader">Reboot into Bootloader</string>
-    <string name="EDL">Reboot into EDL</string>
-    <string name="SoftReboot">Soft Reboot</string>
-    <string name="SystemUI">Restart System UI</string>
-    <string name="ScreenOff">Turn Off Screen</string>
+    <string name="shutdown">Shutdown</string>
+    <string name="reboot">Reboot</string>
+    <string name="reboot_into_safe_mode">Reboot into safe mode</string>
+    <string name="reboot_into_recovery">Reboot into recovery</string>
+    <string name="reboot_into_bootloader">Reboot into bootloader</string>
+    <string name="reboot_into_edl">Reboot into EDL</string>
+    <string name="soft_reboot">Soft reboot</string>
+    <string name="restart_system_ui">Restart system UI</string>
+    <string name="turn_off_screen">Turn off screen</string>
 
     <string name="confirm_dialog">Are you sure?</string>
     <string name="confirm_dialog_summary">Are you sure that you want to perform the selected action?</string>

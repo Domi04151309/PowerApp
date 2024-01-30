@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Energie-app</string>
 
-    <string name="Shutdown">Afsluiten</string>
-    <string name="Reboot">Opnieuw starten</string>
-    <string name="Recovery">Herstelmodus starten</string>
-    <string name="Bootloader">Opstartlader starten</string>
-    <string name="SoftReboot">Zacht opnieuw starten</string>
-    <string name="SystemUI">Startscherm opnieuw starten</string>
-    <string name="ScreenOff">Scherm uitschakelen</string>
+    <string name="shutdown">Afsluiten</string>
+    <string name="reboot">Opnieuw starten</string>
+    <string name="reboot_into_recovery">Herstelmodus starten</string>
+    <string name="reboot_into_bootloader">Opstartlader starten</string>
+    <string name="soft_reboot">Zacht opnieuw starten</string>
+    <string name="restart_system_ui">Startscherm opnieuw starten</string>
+    <string name="turn_off_screen">Scherm uitschakelen</string>
 
     <string name="action_failed">Actie mislukt</string>
     <string name="action_failed_summary">Root is vereist - schakel root in.</string>

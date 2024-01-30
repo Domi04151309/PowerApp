@@ -4,7 +4,7 @@ import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.PowerOptions
 
 class ScreenOffActivity : ShortcutActivity() {
-    override fun getShortcutName(): String = resources.getString(R.string.ScreenOff)
+    override fun getShortcutName(): String = resources.getString(R.string.turn_off_screen)
 
     override fun onOpened() {
         PowerOptions(this).turnOffScreen()

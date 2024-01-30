@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Gestion de l\’énergie</string>
 
-    <string name="Shutdown">Éteindre</string>
-    <string name="Reboot">Redémarrer</string>
-    <string name="SafeMode">Redémarrer en mode sans échec</string>
-    <string name="Recovery">Redémarrer vers l\’outil de récupération</string>
-    <string name="Bootloader">Redémarrer vers le chargeur de démarrage</string>
-    <string name="EDL">Redémarrer vers l\’EDL</string>
-    <string name="SoftReboot">Redémarrage logiciel</string>
-    <string name="SystemUI">Redémarrer l\’interface utilisateur</string>
-    <string name="ScreenOff">Éteindre l\’écran</string>
+    <string name="shutdown">Éteindre</string>
+    <string name="reboot">Redémarrer</string>
+    <string name="reboot_into_safe_mode">Redémarrer en mode sans échec</string>
+    <string name="reboot_into_recovery">Redémarrer vers l\’outil de récupération</string>
+    <string name="reboot_into_bootloader">Redémarrer vers le chargeur de démarrage</string>
+    <string name="reboot_into_edl">Redémarrer vers l\’EDL</string>
+    <string name="soft_reboot">Redémarrage logiciel</string>
+    <string name="restart_system_ui">Redémarrer l\’interface utilisateur</string>
+    <string name="turn_off_screen">Éteindre l\’écran</string>
 
     <string name="confirm_dialog">Veuillez confirmer</string>
     <string name="confirm_dialog_summary">Voulez-vous vraiment réaliser l\’action sélectionnée ?</string>

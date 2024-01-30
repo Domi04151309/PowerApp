@@ -4,9 +4,9 @@
         android:shortcutId="shutdown"
         android:enabled="true"
         android:icon="@drawable/ic_round_shutdown"
-        android:shortcutShortLabel="@string/Shutdown"
-        android:shortcutLongLabel="@string/Shutdown"
-        android:shortcutDisabledMessage="@string/Shutdown">
+        android:shortcutShortLabel="@string/shutdown"
+        android:shortcutLongLabel="@string/shutdown"
+        android:shortcutDisabledMessage="@string/shutdown">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -19,9 +19,9 @@
         android:shortcutId="reboot"
         android:enabled="true"
         android:icon="@drawable/ic_round_reboot"
-        android:shortcutShortLabel="@string/Reboot"
-        android:shortcutLongLabel="@string/Reboot"
-        android:shortcutDisabledMessage="@string/Reboot">
+        android:shortcutShortLabel="@string/reboot"
+        android:shortcutLongLabel="@string/reboot"
+        android:shortcutDisabledMessage="@string/reboot">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -34,9 +34,9 @@
         android:shortcutId="reboot"
         android:enabled="true"
         android:icon="@drawable/ic_round_safe_mode"
-        android:shortcutShortLabel="@string/SafeMode"
-        android:shortcutLongLabel="@string/SafeMode"
-        android:shortcutDisabledMessage="@string/SafeMode">
+        android:shortcutShortLabel="@string/reboot_into_safe_mode"
+        android:shortcutLongLabel="@string/reboot_into_safe_mode"
+        android:shortcutDisabledMessage="@string/reboot_into_safe_mode">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -49,9 +49,9 @@
         android:shortcutId="recovery"
         android:enabled="true"
         android:icon="@drawable/ic_round_recovery"
-        android:shortcutShortLabel="@string/Recovery"
-        android:shortcutLongLabel="@string/Recovery"
-        android:shortcutDisabledMessage="@string/Recovery">
+        android:shortcutShortLabel="@string/reboot_into_recovery"
+        android:shortcutLongLabel="@string/reboot_into_recovery"
+        android:shortcutDisabledMessage="@string/reboot_into_recovery">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -64,9 +64,9 @@
         android:shortcutId="bootloader"
         android:enabled="true"
         android:icon="@drawable/ic_round_bootloader"
-        android:shortcutShortLabel="@string/Bootloader"
-        android:shortcutLongLabel="@string/Bootloader"
-        android:shortcutDisabledMessage="@string/Bootloader">
+        android:shortcutShortLabel="@string/reboot_into_bootloader"
+        android:shortcutLongLabel="@string/reboot_into_bootloader"
+        android:shortcutDisabledMessage="@string/reboot_into_bootloader">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -79,9 +79,9 @@
         android:shortcutId="edl"
         android:enabled="true"
         android:icon="@drawable/ic_round_edl"
-        android:shortcutShortLabel="@string/EDL"
-        android:shortcutLongLabel="@string/EDL"
-        android:shortcutDisabledMessage="@string/EDL">
+        android:shortcutShortLabel="@string/reboot_into_edl"
+        android:shortcutLongLabel="@string/reboot_into_edl"
+        android:shortcutDisabledMessage="@string/reboot_into_edl">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -94,9 +94,9 @@
         android:shortcutId="sortreboot"
         android:enabled="true"
         android:icon="@drawable/ic_round_soft_reboot"
-        android:shortcutShortLabel="@string/SoftReboot"
-        android:shortcutLongLabel="@string/SoftReboot"
-        android:shortcutDisabledMessage="@string/SoftReboot">
+        android:shortcutShortLabel="@string/soft_reboot"
+        android:shortcutLongLabel="@string/soft_reboot"
+        android:shortcutDisabledMessage="@string/soft_reboot">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -109,9 +109,9 @@
         android:shortcutId="restartsystemui"
         android:enabled="true"
         android:icon="@drawable/ic_round_restart_system_ui"
-        android:shortcutShortLabel="@string/SystemUI"
-        android:shortcutLongLabel="@string/SystemUI"
-        android:shortcutDisabledMessage="@string/SystemUI">
+        android:shortcutShortLabel="@string/restart_system_ui"
+        android:shortcutLongLabel="@string/restart_system_ui"
+        android:shortcutDisabledMessage="@string/restart_system_ui">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"
@@ -124,9 +124,9 @@
         android:shortcutId="screenoff"
         android:enabled="true"
         android:icon="@drawable/ic_round_screen_off"
-        android:shortcutShortLabel="@string/ScreenOff"
-        android:shortcutLongLabel="@string/ScreenOff"
-        android:shortcutDisabledMessage="@string/ScreenOff">
+        android:shortcutShortLabel="@string/turn_off_screen"
+        android:shortcutLongLabel="@string/turn_off_screen"
+        android:shortcutDisabledMessage="@string/turn_off_screen">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="io.github.domi04151309.powerapp"

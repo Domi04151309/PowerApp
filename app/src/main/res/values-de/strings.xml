@@ -4,15 +4,15 @@
 
     <string name="loading">Lädt</string>
 
-    <string name="Shutdown">Herunterfahren</string>
-    <string name="Reboot">Neu starten</string>
-    <string name="SafeMode">In den sicheren Modus neu starten</string>
-    <string name="Recovery">In den Wiederherstellungsmodus neu starten</string>
-    <string name="Bootloader">In den Bootloader neu starten</string>
-    <string name="EDL">In EDL neu starten</string>
-    <string name="SoftReboot">Sanft neu starten</string>
-    <string name="SystemUI">System UI neu starten</string>
-    <string name="ScreenOff">Bildschirm ausschalten</string>
+    <string name="shutdown">Herunterfahren</string>
+    <string name="reboot">Neu starten</string>
+    <string name="reboot_into_safe_mode">In den sicheren Modus neu starten</string>
+    <string name="reboot_into_recovery">In den Wiederherstellungsmodus neu starten</string>
+    <string name="reboot_into_bootloader">In den Bootloader neu starten</string>
+    <string name="reboot_into_edl">In EDL neu starten</string>
+    <string name="soft_reboot">Sanft neu starten</string>
+    <string name="restart_system_ui">System UI neu starten</string>
+    <string name="turn_off_screen">Bildschirm ausschalten</string>
 
     <string name="confirm_dialog">Sind Sie sich sicher?</string>
     <string name="confirm_dialog_summary">Sind Sie sich sicher, dass Sie den ausgewählten Befehl ausführen wollen?</string>

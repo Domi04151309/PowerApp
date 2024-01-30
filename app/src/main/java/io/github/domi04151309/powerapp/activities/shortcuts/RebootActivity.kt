@@ -4,7 +4,7 @@ import io.github.domi04151309.powerapp.R
 import io.github.domi04151309.powerapp.helpers.PowerOptions
 
 class RebootActivity : ShortcutActivity() {
-    override fun getShortcutName(): String = resources.getString(R.string.Reboot)
+    override fun getShortcutName(): String = resources.getString(R.string.reboot)
 
     override fun onOpened() {
         PowerOptions(this).reboot()

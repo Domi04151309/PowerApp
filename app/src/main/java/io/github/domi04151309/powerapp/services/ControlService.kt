@@ -19,15 +19,15 @@ class ControlService : ControlsProviderService() {
     private var updateSubscriber: Flow.Subscriber<in Control>? = null
     private val items: Map<String, Int> =
         mapOf(
-            Pair("shutdown", R.string.Shutdown),
-            Pair("reboot", R.string.Reboot),
-            Pair("safe_mode", R.string.SafeMode),
-            Pair("recovery", R.string.Recovery),
-            Pair("bootloader", R.string.Bootloader),
-            Pair("edl", R.string.EDL),
-            Pair("soft_reboot", R.string.SoftReboot),
-            Pair("restart_system_ui", R.string.SystemUI),
-            Pair("screen_off", R.string.ScreenOff),
+            Pair("shutdown", R.string.shutdown),
+            Pair("reboot", R.string.reboot),
+            Pair("safe_mode", R.string.reboot_into_safe_mode),
+            Pair("recovery", R.string.reboot_into_recovery),
+            Pair("bootloader", R.string.reboot_into_bootloader),
+            Pair("edl", R.string.reboot_into_edl),
+            Pair("soft_reboot", R.string.soft_reboot),
+            Pair("restart_system_ui", R.string.restart_system_ui),
+            Pair("screen_off", R.string.turn_off_screen),
         )
 
     override fun createPublisherForAllAvailable(): Flow.Publisher<Control> =

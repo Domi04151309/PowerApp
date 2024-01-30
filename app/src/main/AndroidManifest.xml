@@ -49,7 +49,7 @@
             android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.ShutdownActivity"
-            android:label="@string/Shutdown"
+            android:label="@string/shutdown"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -59,7 +59,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.RebootActivity"
-            android:label="@string/Reboot"
+            android:label="@string/reboot"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -69,7 +69,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.SafeModeActivity"
-            android:label="@string/SafeMode"
+            android:label="@string/reboot_into_safe_mode"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -79,7 +79,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.BootloaderActivity"
-            android:label="@string/Bootloader"
+            android:label="@string/reboot_into_bootloader"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -89,7 +89,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.EDLActivity"
-            android:label="@string/EDL"
+            android:label="@string/reboot_into_edl"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -99,7 +99,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.SoftRebootActivity"
-            android:label="@string/SoftReboot"
+            android:label="@string/soft_reboot"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -109,7 +109,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.RecoveryActivity"
-            android:label="@string/Recovery"
+            android:label="@string/reboot_into_recovery"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -119,7 +119,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.RestartUIActivity"
-            android:label="@string/SystemUI"
+            android:label="@string/restart_system_ui"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -129,7 +129,7 @@
         </activity>
         <activity
             android:name="io.github.domi04151309.powerapp.activities.shortcuts.ScreenOffActivity"
-            android:label="@string/ScreenOff"
+            android:label="@string/turn_off_screen"
             android:theme="@android:style/Theme.NoDisplay"
             android:exported="true">
             <intent-filter>
@@ -150,7 +150,7 @@
         <service
             android:name=".services.ShutdownTileService"
             android:icon="@drawable/ic_shutdown"
-            android:label="@string/Shutdown"
+            android:label="@string/shutdown"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
@@ -164,7 +164,7 @@
         <service
             android:name=".services.RebootTileService"
             android:icon="@drawable/ic_reboot"
-            android:label="@string/Reboot"
+            android:label="@string/reboot"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
@@ -178,7 +178,7 @@
         <service
             android:name=".services.RestartSystemUITileService"
             android:icon="@drawable/ic_restart"
-            android:label="@string/SystemUI"
+            android:label="@string/restart_system_ui"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
