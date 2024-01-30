@@ -31,13 +31,5 @@
                     android:singleLine="true"
                     android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
                     android:textIsSelectable="false" />
-
-                <TextView
-                    android:id="@+id/summary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="4"
-                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                    android:textIsSelectable="false" />
         </LinearLayout>
 </LinearLayout>
